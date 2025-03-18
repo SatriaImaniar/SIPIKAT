@@ -42,25 +42,37 @@
                                             <i class="fas fa-tasks mr-2"></i> SIPIKAT | Login
                                         </h1>
                                     </div>
-                                    <form class="user">
+                                    <form class="user" method="POST" action="{{ route('loginproses') }}">
+                                        @csrf
+                                        {{-- input NIP --}}
                                         <div class="form-group">
-                                            <input type="email" class="form-control form-control-user"
-                                                placeholder="Masukan Email" name="email">
+                                            <input type="text" class="form-control form-control-user @error('nip') is-invalid @enderror"
+                                                placeholder="Masukkan NIP" name="nip" value="{{ old('nip') }}">
+                                            @error('nip')
+                                                <small class="text-danger">
+                                                    {{ $message }}
+                                                </small>
+                                            @enderror
                                         </div>
+                                        
                                         <div class="form-group">
-                                            <input type="password" class="form-control form-control-user"
+                                            <input type="password" class="form-control form-control-user @error('password') is-invalid @enderror"
                                                 placeholder="Masukan Password" name="password">
+                                                @error('password')
+                                                <small class="text-danger">
+                                                    {{ $message }}
+                                                </small>
+                                            @enderror
                                         </div>
-                                        <button type="submit" href="#" class="btn btn-primary btn-user btn-block">
+                                        <button type="submit" class="btn btn-primary btn-user btn-block">
                                             Login
                                         </button>
-                                        
                                     </form>
                                     <hr>
                                     <div class="text-center">
                                         <small>
-                                        Kembali Ke Beranda
-                                        <a href="{{ route('welcome') }}">Klik disini</a> 
+                                        Belum punya akun?
+                                        <a href="{{ route('register') }}">Daftar disini</a> 
                                     </small>
                                     </div>
                                 </div>
@@ -82,6 +94,31 @@
     <script src="{{ asset('sb-admin/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
     <!-- Custom scripts for all pages-->
     <script src="{{ asset('sb-admin/js/sb-admin-2.min.js') }}"></script>
+
+    {{-- kene sweetalert --}}
+    <script src="{{ asset('sweetalert/dist/sweetalert2.all.min.js') }}"></script>
+    
+    @session('success')
+    <script>
+        Swal.fire({
+            title: "sukses login",
+            text: "{{ session('sukses') }}",
+            icon: "success"
+          });
+        </script>
+    @endsession
+
+    @session('error')
+    <script>
+        Swal.fire({
+            title: "Gagal login",
+            text: "{{ session('error') }}",
+            icon: "error"
+          });
+        </script>
+    @endsession
+    
+   
 
 </body>
 

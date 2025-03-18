@@ -17,9 +17,9 @@
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="{{ asset('sb-admin/css/sb-admin-2.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('sb-admin/css/sb-admin-2.min.css') }}" rel="stylesheet">    
    <!-- Custom styles for this page -->
-    <link href="{{ asset('sb-admin/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet') }}">
+    <link href="{{ asset('sb-admin/vendor/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
 
 </head>
 
@@ -67,7 +67,7 @@
              <li class="nav-item {{ $menuAdminTugas ?? '' }}">
                 <a class="nav-link" href="{{ route('tugas') }}"> 
                 <i class="fas fa-tasks"></i>
-                <span>Tugas</span></a>
+                <span>Tugas </span></a>
              </li>
 
              <li class="nav-item">
@@ -79,8 +79,10 @@
         <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Custom Anggota Pns:</h6>
             <a class="collapse-item" href="utilities-color.html">Tmt Pns </a>
-            <a class="collapse-item" href="utilities-border.html">Tmt Kenaikan Berkala</a>
+            <a class="collapse-item" href="utilities-color.html">Tmt Cpns </a>
+            <a class="collapse-item" href="utilities-border.html">Gaji Berkala</a>
             <a class="collapse-item" href="utilities-animation.html">Tmt kenaikan Pangkat</a>
+            <a class="collapse-item" href="utilities-animation.html">Data Pegawai </a>
             <a class="collapse-item" href="utilities-other.html">Other</a>
         </div>
     </div>
@@ -181,15 +183,21 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseasetmobil"
                     aria-expanded="true" aria-controls="collapseasetmobil">
                     <i class=""></i>
-                    <span>Aset Mobil</span>
+                    <span>Aset </span>
                 </a>
                 <div id="collapseasetmobil" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Aset mobil</h6>
-                        <a class="collapse-item" href="utilities-color.html">Servis</a>
-                        <a class="collapse-item" href="utilities-border.html">Perpanjang STNK</a>
-                        <a class="collapse-item" href="utilities-animation.html">Ganti Plat </a>
+                        <h6 class="collapse-header">Aset </h6>
+                        <a class="collapse-item" href="utilities-color.html">Mobil dan Motor</a>
+                        <a>service<a>
+                        <a>Ganti plat</a>
+                        <a class="collapse-item" href="utilities-border.html">Barang</a>
+                        {{--  penggunane sp --}}
+                        {{--  kode barang --}}
+                        <span>laptop</span>
+                        <span>printer</span>
+                        <span>Pc</span>
                         <a class="collapse-item" href="utilities-other.html">Other</a>
                     </div>
                 </div>
@@ -571,5 +579,29 @@
  <script src="{{ asset('sb-admin/vendor/datatables/dataTables.bootstrap4.min.js') }}"></script>
  <!-- Page level custom scripts -->
  <script src="{{ asset('sb-admin/js/demo/datatables-demo.js') }}"></script>
+{{-- Script public/Sweetalert --}}
+<script src="{{ asset('sweetalert/dist/sweetalert2.all.min.js') }}"></script>
+
+@session('success')
+<script>
+    Swal.fire({
+        title: "sukses login",
+        text: "{{ session('sukses') }}",
+        icon: "success"
+      });
+    </script>
+@endsession
+
+@session('error')
+<script>
+    Swal.fire({
+        title: "Gagal login",
+        text: "{{ session('error') }}",
+        icon: "error"
+      });
+    </script>
+@endsession
+
+
 </body>
 </html>

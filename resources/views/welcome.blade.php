@@ -94,7 +94,7 @@
             <h1>Inspektorat Masa kini</h1>
             <p>SIPIKAT (Sistem Informasi Pengawasan Inspektorat) Menggabungkan teknologi dan kreativitas untuk layanan yang lebih efektif dan responsif.</p>
             <div class="d-flex">
-              <a href="#about" class="btn-get-started">Login</a>
+              <a href="{{ route('login') }}" class="btn-get-started">Login</a>
             </div>
           </div>
           <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="100">

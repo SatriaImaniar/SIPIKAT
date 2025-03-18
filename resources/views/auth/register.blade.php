@@ -9,28 +9,92 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Register</title>
+    <title>SIPIKAT | Register</title>
 
     <!-- Custom fonts for this template-->
-    <link href="{{ () }}vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <link href="{{ asset('sb-admin/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i' rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="{{ asset('sb-admin/css/sb-admin-2.min.css') }}" rel="stylesheet">
 
 </head>
 
-<body class="bg-gradient-primary">
+<body class="bg-gradient-primary d-flex align-items-center justify-content-center min-vh-100">
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <div class="card o-hidden border-0 shadow-lg" style="max-width: 700px; background: linear-gradient(135deg, #2deec4, #19fe00); color: white;">
+            <div class="card-body p-5">
+                <div class="text-center mb-4">
+                    <h1 class="h3 font-weight-bold">Buat Akun </h1>
+                    <h1 class="h3 font-weight-bold">Sipikat</h1>
+                    <p class="small">Silakan isi formulir di bawah untuk mendaftar</p>
+                </div>
+                
+                <form class="user">
+                    <div class="form-group row"></div>
+                    <div class="form-group">
+                        <input type="email" class="form-control form-control-user" placeholder="Nama">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control form-control-user" placeholder="NIP" pattern="\d{18}" title="NIP harus terdiri dari 18 angka">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control form-control-user" placeholder="Email">
+                    </div>
+                    <div class="form-group ">
+                         <div class="col-sm-6 mb-3"> </div> 
+                            <input type="password" class="form-control form-control-user" placeholder="Kata Sandi">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-user btn-block" href="{{ route('login') }}">
+                     <b>DAFTAR</b> 
+                    </button>
+                </form>
+{{--     
+                <hr class="bg-white">
+                <div class="text-center">
+                    <a class="btn btn-outline-light btn-user btn-block" href="#">
+                        <i class="fab fa-google"></i> Daftar dengan Google
+                    </a>
+                    <a class="btn btn-outline-light btn-user btn-block" href="#">
+                        <i class="fab fa-facebook-f"></i> Daftar dengan Facebook
+                    </a>
+                </div>
+     --}}
+                <hr class="bg-white">
+                <div class="text-center">
+                    <a class="small text-white" href="#">Lupa Password?</a>
+                </div>
+                <div class="text-center">
+                    <small>Sudah Punya Akun</small>
+                    <a class="small text-white" href="{{ route('login') }}">Klik disini!</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <div class="container ">
+    <!-- Bootstrap core JavaScript-->
+    <script src="{{ ('vendor/jquery/jquery.min.jssb-admin') }}"></script>
+    <script src="{{ ('vendor/bootstrap/js/bootstrap.bundle.min.jssb-admin') }}"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="{{ ('vendor/jquery-easing/jquery.easing.min.jssb-admin') }}"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="{{ ('js/sb-admin-2.min.jssb-admin') }}"></script>
+
+</body>
+
+</html>
+    
+
+{{-- REGISTER BAWAAN SB-ADMIN --}}
+    {{-- <div class="container ">
 
         <div class="card o-hidden border-0 shadow-lg bg-primary">
             
-            <div class="card-body bg-success">
+            <div class="card-body">
                 <!-- Nested Row within Card Body -->
-                <div class="row bg-danger">
+                <div class="row">
                     <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
                     <div class="col-lg-7">
                         <div class="p-5">
@@ -86,18 +150,9 @@
             </div>
         </div>
 
-    </div>
+    </div> --}}
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
 
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
 
-</body>
-
-</html>
