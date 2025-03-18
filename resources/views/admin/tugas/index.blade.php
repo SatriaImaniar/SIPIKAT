@@ -1,15 +1,17 @@
 @extends('layouts/app')
-
 @section('content')
     <h1 class="h3 mb-4 text-gray-800">
         <i class="fas fa-tasks mr-2"></i>
         {{ $title }}
     </h1>
 
+<<<<<<< HEAD
     <B>ESIH KOSONG DURUNG TAK DESENI</B>
 
 
 
+=======
+>>>>>>> 2d506698b6b5fb97007b619ab5174ff26fb3db5f
     {{-- <div class="card">
         <div class="card-header d-flex flex-wrap justify-content-center justify-content-xl-between">
             <div class="mb-1 mr-2">
@@ -24,9 +26,9 @@
             <div>
                 <a href="#" class="btn btn-sm btn-danger"> <i class="fas fa-file-excel mr-2"></i>PDF </a>
             </div>
-        </div>
-        <div class="card-body ">
+        </div> 
 
+        <div class="card-body d-flex ">
             <div class="table-responsive">
                 <table class="table table-bordered float-right" id="dataTable" width="100%" cellspacing="0">
                     <thead class="bg-primary text-white">
@@ -70,4 +72,8 @@
             </div>
         </div>
     </div> --}}
+<<<<<<< HEAD
 @endsection
+=======
+@endsection
+>>>>>>> 2d506698b6b5fb97007b619ab5174ff26fb3db5f

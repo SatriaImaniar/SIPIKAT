@@ -195,15 +195,21 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseasetmobil"
                     aria-expanded="true" aria-controls="collapseasetmobil">
                     <i class=""></i>
-                    <span>Aset Mobil</span>
+                    <span>Aset </span>
                 </a>
                 <div id="collapseasetmobil" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Aset mobil</h6>
-                        <a class="collapse-item" href="utilities-color.html">Servis</a>
-                        <a class="collapse-item" href="utilities-border.html">Perpanjang STNK</a>
-                        <a class="collapse-item" href="utilities-animation.html">Ganti Plat </a>
+                        <h6 class="collapse-header">Aset </h6>
+                        <a class="collapse-item" href="utilities-color.html">Mobil dan Motor</a>
+                        <a>service<a>
+                        <a>Ganti plat</a>
+                        <a class="collapse-item" href="utilities-border.html">Barang</a>
+                        {{--  penggunane sp --}}
+                        {{--  kode barang --}}
+                        <span>laptop</span>
+                        <span>printer</span>
+                        <span>Pc</span>
                         <a class="collapse-item" href="utilities-other.html">Other</a>
                     </div>
                 </div>
