@@ -14,7 +14,15 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('email')->unique();
+            $table->string('nip')->unique()->comment('Nomor Induk Pegawai');
+            $table->text('alamat');
+            $table->string('tempat_lahir');
+            $table->date('tanggal_lahir');
+            $table->enum('jenis_kelamin', ['L', 'P']);
+            $table->string('agama');
+            $table->string('status')->nullable();
+            $table->string('ktp')->unique()->comment('Nomor KTP');
+            $table->string('npwp')->unique()->comment('Nomor NPWP');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

@@ -9,7 +9,7 @@
                     <div class="p-5">
                         <div class="text-center mb-4">
                             <h1 class="h4 text-gray-900 mb-3">
-                                <i class="fas fa-tasks me-2"></i> SIPIKAT | Login
+                                <i class="fas fa-tasks me-2"></i>Login
                             </h1>
                         </div>
                         
@@ -17,14 +17,14 @@
                             @csrf
 
                             <div class="form-group mb-3">
-                                <input id="email" type="email" 
-                                    class="form-control form-control-user @error('email') is-invalid @enderror" 
-                                    name="email" 
-                                    value="{{ old('email') }}" 
-                                    placeholder="Masukan Email"
-                                    required autocomplete="email" autofocus>
+                                <input id="nip" type="nip" 
+                                    class="form-control form-control-user @error('nip') is-invalid @enderror" 
+                                    name="nip" 
+                                    value="{{ old('nip') }}" 
+                                    placeholder="Masukan Nip"
+                                    required autocomplete="nip" autofocus>
 
-                                @error('email')
+                                @error('nip')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
