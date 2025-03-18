@@ -9,17 +9,20 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SIPIKAT{{ $title }}</title>
+    <title>SIPIKAT</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{ asset('sb-admin/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
-    <!-- Custom styles for this template-->
+    {{-- --Custom styles for this template--> --}}
     <link href="{{ asset('sb-admin/css/sb-admin-2.min.css') }}" rel="stylesheet">
-   <!-- Custom styles for this page -->
-    <link href="{{ asset('sb-admin/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet') }}">
+
+    <!-- Custom styles for this page -->
+    <link href="{{ asset('sb-admin/vendor/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('sb-admin/css/sb-admin-2.css') }}">
 
 </head>
 
@@ -34,17 +37,17 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div class="sidebar-brand-icon rotate-n-15">
-                <i class="fas fa-book"></i>
+                    <i class="fas fa-book"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">SIPIKAT<sup></sup></div>
+                <div class="sidebar-brand-text mx-3">SIPIKAT hello world<sup></sup></div>
             </a>
 
             <!-- Divider -->
-            <hr class="sidebar-divider my-0">    
+            <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item {{ $menuDashboard ?? '' }}">
-                <a class="nav-link" href="{{ route ('dashboard') }}">
+                <a class="nav-link" href="{{ route('dashboard') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -57,111 +60,122 @@
                 Menu Admin
             </div>
 
-             <!-- Nav Item - Utilities -->
-             <li class="nav-item {{ $menuAdminUser ?? '' }}">
-                <a class="nav-link" href="{{ route('user') }}"> 
-                <i class="fas fa-user"></i>
-                <span>User</span></a>
-             </li>
-             <!-- Nav Item - Utilities -->
-             <li class="nav-item {{ $menuAdminTugas ?? '' }}">
-                <a class="nav-link" href="{{ route('tugas') }}"> 
-                <i class="fas fa-tasks"></i>
-                <span>Tugas</span></a>
-             </li>
+            <!-- Nav Item - Utilities -->
+            <li class="nav-item {{ $menuAdminUser ?? '' }}">
+                <a class="nav-link" href="{{ route('user') }}">
+                    <i class="fas fa-user"></i>
+                    <span>User</span></a>
+            </li>
+            <!-- Nav Item - Utilities -->
+            <li class="nav-item {{ $menuAdminTugas ?? '' }}">
+                <a class="nav-link" href="{{ route('tugas') }}">
+                    <i class="fas fa-tasks"></i>
+                    <span>Tugas</span></a>
+            </li>
 
-             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDatauser" aria-expanded="true" aria-controls="collapseDatauser">
-                     <i class=""></i>
-                     <span>Data User</span>
-                    </a>
-    <div id="collapseDatauser" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-        <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Anggota Pns:</h6>
-            <a class="collapse-item" href="utilities-color.html">Tmt Pns </a>
-            <a class="collapse-item" href="utilities-border.html">Tmt Kenaikan Berkala</a>
-            <a class="collapse-item" href="utilities-animation.html">Tmt kenaikan Pangkat</a>
-            <a class="collapse-item" href="utilities-other.html">Other</a>
-        </div>
-    </div>
-</li>
-             <!-- Nav Item - Utilities Collapse Menu -->
-             <li class="nav-item">
-    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDataTugas" aria-expanded="true" aria-controls="collapseDataTugas">
-        <i class=""></i>
-        <span>Data Tugas</span>
-    </a>
-    <div id="collapseDataTugas" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-        <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Data Tugas:</h6>
-            <a class="collapse-item" href="utilities-color.html">Tmt Kenaikan Pangkat</a>
-            <a class="collapse-item" href="utilities-border.html">Tmt Kenaikan Berkala</a>
-            <a class="collapse-item" href="utilities-animation.html">Tmt Kenaikan pns</a>
-            <a class="collapse-item" href="utilities-other.html">Other</a>
-        </div>
-    </div>
-</li>
-<!-- Divider -->
-<hr class="sidebar-divider">
-       <!-- Heading -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDatauser"
+                    aria-expanded="true" aria-controls="collapseDatauser">
+                    <i class=""></i>
+                    <span>Data User</span>
+                </a>
+                <div id="collapseDatauser" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Anggota Pns:</h6>
+                        <a class="collapse-item" href="utilities-color.html">Tmt Pns </a>
+                        <a class="collapse-item" href="utilities-border.html">Tmt Kenaikan Berkala</a>
+                        <a class="collapse-item" href="utilities-animation.html">Tmt kenaikan Pangkat</a>
+                        <a class="collapse-item" href="utilities-other.html">Other</a>
+                    </div>
+                </div>
+            </li>
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDataTugas"
+                    aria-expanded="true" aria-controls="collapseDataTugas">
+                    <i class=""></i>
+                    <span>Data Tugas</span>
+                </a>
+                <div id="collapseDataTugas" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Data Tugas:</h6>
+                        <a class="collapse-item" href="utilities-color.html">Tmt Kenaikan Pangkat</a>
+                        <a class="collapse-item" href="utilities-border.html">Tmt Kenaikan Berkala</a>
+                        <a class="collapse-item" href="utilities-animation.html">Tmt Kenaikan pns</a>
+                        <a class="collapse-item" href="utilities-other.html">Other</a>
+                    </div>
+                </div>
+            </li>
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+            <!-- Heading -->
             <div class="sidebar-heading">
                 Menu User
             </div>
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
-    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDaftarNamaPNS" aria-expanded="true" aria-controls="collapseDaftarNamaPNS">
-        <i class=""></i>
-        <span>Data Anggota pns</span>
-    </a>
-    <div id="collapseDaftarNamaPNS" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-        <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Anggota Pns:</h6>
-            <a class="collapse-item" href="utilities-color.html">Tmt Kenaikan Pangkat</a>
-            <a class="collapse-item" href="utilities-border.html">Tmt Kenaikan Berkala</a>
-            <a class="collapse-item" href="utilities-animation.html">Tmt Kenaikan Per PNS</a>
-            <a class="collapse-item" href="utilities-other.html">Other</a>
-        </div>
-    </div>
-</li>
-
-
-<li class="nav-item">
-    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDiklat" aria-expanded="true" aria-controls="collapseDiklat">
-        <i class=""></i>
-        <span>Diklat</span>
-    </a>
-    <div id="collapseDiklat" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-        <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Diklat:</h6>
-            <a class="collapse-item" href="utilities-color.html">Tmt Kenaikan Pangkat</a>
-            <a class="collapse-item" href="utilities-border.html">Tmt Kenaikan Berkala</a>
-            <a class="collapse-item" href="utilities-animation.html">Tmt Kenaikan Per PNS</a>
-            <a class="collapse-item" href="utilities-other.html">Other</a>
-        </div>
-    </div>
-</li>
-
-<li class="nav-item">
-    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseNamaJabatan" aria-expanded="true" aria-controls="collapseNamaJabatan">
-        <i class=""></i>
-        <span>Data nama Jabatan</span>
-    </a>
-    <div id="collapseNamaJabatan" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-        <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom nama jabatan:</h6>
-            <a class="collapse-item" href="utilities-color.html">Tmt Kenaikan Pangkat</a>
-            <a class="collapse-item" href="utilities-border.html">Tmt Kenaikan Berkala</a>
-            <a class="collapse-item" href="utilities-animation.html">Tmt Kenaikan Per PNS</a>
-            <a class="collapse-item" href="utilities-other.html">Other</a>
-        </div>
-    </div>
-</li>
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDaftarNamaPNS"
+                    aria-expanded="true" aria-controls="collapseDaftarNamaPNS">
+                    <i class=""></i>
+                    <span>Data Anggota pns</span>
+                </a>
+                <div id="collapseDaftarNamaPNS" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Anggota Pns:</h6>
+                        <a class="collapse-item" href="utilities-color.html">Tmt Kenaikan Pangkat</a>
+                        <a class="collapse-item" href="utilities-border.html">Tmt Kenaikan Berkala</a>
+                        <a class="collapse-item" href="utilities-animation.html">Tmt Kenaikan Per PNS</a>
+                        <a class="collapse-item" href="utilities-other.html">Other</a>
+                    </div>
+                </div>
+            </li>
 
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseinputdatakepaladinas"
-                    aria-expanded="true" aria-controls="collapseinputdatakepaladinas">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDiklat"
+                    aria-expanded="true" aria-controls="collapseDiklat">
+                    <i class=""></i>
+                    <span>Diklat</span>
+                </a>
+                <div id="collapseDiklat" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Diklat:</h6>
+                        <a class="collapse-item" href="utilities-color.html">Tmt Kenaikan Pangkat</a>
+                        <a class="collapse-item" href="utilities-border.html">Tmt Kenaikan Berkala</a>
+                        <a class="collapse-item" href="utilities-animation.html">Tmt Kenaikan Per PNS</a>
+                        <a class="collapse-item" href="utilities-other.html">Other</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse"
+                    data-target="#collapseNamaJabatan" aria-expanded="true" aria-controls="collapseNamaJabatan">
+                    <i class=""></i>
+                    <span>Data nama Jabatan</span>
+                </a>
+                <div id="collapseNamaJabatan" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom nama jabatan:</h6>
+                        <a class="collapse-item" href="utilities-color.html">Tmt Kenaikan Pangkat</a>
+                        <a class="collapse-item" href="utilities-border.html">Tmt Kenaikan Berkala</a>
+                        <a class="collapse-item" href="utilities-animation.html">Tmt Kenaikan Per PNS</a>
+                        <a class="collapse-item" href="utilities-other.html">Other</a>
+                    </div>
+                </div>
+            </li>
+
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse"
+                    data-target="#collapseinputdatakepaladinas" aria-expanded="true"
+                    aria-controls="collapseinputdatakepaladinas">
                     <i class=""></i>
                     <span>Data Kepala Dinas</span>
                 </a>
@@ -195,8 +209,8 @@
                 </div>
             </li>
 
-             <!-- Nav Item - Pages Collapse Menu -->
-             <li class="nav-item">
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-wrench"></i>
@@ -303,8 +317,8 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-search fa-fw"></i>
                             </a> -->
-                            <!-- Dropdown - Messages -->
-                            <!-- <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                        <!-- Dropdown - Messages -->
+                        <!-- <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
                                 aria-labelledby="searchDropdown">
                                 <form class="form-inline mr-auto w-100 navbar-search">
                                     <div class="input-group">
@@ -327,50 +341,51 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-bell fa-fw"></i> -->
 
-                                <!-- Counter - Alerts -->
-                                <!-- <span class="badge badge-danger badge-counter">3+</span>
+                        <!-- Counter - Alerts -->
+                        <!-- <span class="badge badge-danger badge-counter">3+</span>
                             </a> -->
-                            <!-- Dropdown - Alerts -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="alertsDropdown">
-                                <h6 class="dropdown-header">
-                                    Alerts Center
-                                </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-primary">
-                                            <i class="fas fa-file-alt text-white"></i>
-                                        </div>
+                        <!-- Dropdown - Alerts -->
+                        <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                            aria-labelledby="alertsDropdown">
+                            <h6 class="dropdown-header">
+                                Alerts Center
+                            </h6>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="mr-3">
+                                    <div class="icon-circle bg-primary">
+                                        <i class="fas fa-file-alt text-white"></i>
                                     </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 12, 2019</div>
-                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                                </div>
+                                <div>
+                                    <div class="small text-gray-500">December 12, 2019</div>
+                                    <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="mr-3">
+                                    <div class="icon-circle bg-success">
+                                        <i class="fas fa-donate text-white"></i>
                                     </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-success">
-                                            <i class="fas fa-donate text-white"></i>
-                                        </div>
+                                </div>
+                                <div>
+                                    <div class="small text-gray-500">December 7, 2019</div>
+                                    $290.29 has been deposited into your account!
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="mr-3">
+                                    <div class="icon-circle bg-warning">
+                                        <i class="fas fa-exclamation-triangle text-white"></i>
                                     </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 7, 2019</div>
-                                        $290.29 has been deposited into your account!
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-warning">
-                                            <i class="fas fa-exclamation-triangle text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 2, 2019</div>
-                                        Spending Alert: We've noticed unusually high spending for your account.
-                                    </div>
-                                </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
-                            </div>
+                                </div>
+                                <div>
+                                    <div class="small text-gray-500">December 2, 2019</div>
+                                    Spending Alert: We've noticed unusually high spending for your account.
+                                </div>
+                            </a>
+                            <a class="dropdown-item text-center small text-gray-500" href="#">Show All
+                                Alerts</a>
+                        </div>
                         </li>
 
                         <!-- Nav Item - Messages -->
@@ -380,67 +395,65 @@
                                 <i class="fas fa-envelope fa-fw"></i> -->
 
 
-                                <!-- Counter - Messages -->
-                                <!-- <span class="badge badge-danger badge-counter">7</span>
+                        <!-- Counter - Messages -->
+                        <!-- <span class="badge badge-danger badge-counter">7</span>
                             </a> -->
 
 
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="messagesDropdown">
-                                <h6 class="dropdown-header">
-                                    Message Center
-                                </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_1.svg"
-                                            alt="...">
-                                        <div class="status-indicator bg-success"></div>
-                                    </div>
-                                    <div class="font-weight-bold">
-                                        <div class="text-truncate">Hi there! I am wondering if you can help me with a
-                                            problem I've been having.</div>
-                                        <div class="small text-gray-500">Emily Fowler · 58m</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_2.svg"
-                                            alt="...">
-                                        <div class="status-indicator"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">I have the photos that you ordered last month, how
-                                            would you like them sent to you?</div>
-                                        <div class="small text-gray-500">Jae Chun · 1d</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_3.svg"
-                                            alt="...">
-                                        <div class="status-indicator bg-warning"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">Last month's report looks great, I am very happy with
-                                            the progress so far, keep up the good work!</div>
-                                        <div class="small text-gray-500">Morgan Alvarez · 2d</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
-                                            alt="...">
-                                        <div class="status-indicator bg-success"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">Am I a good boy? The reason I ask is because someone
-                                            told me that people say this to all dogs, even if they aren't good...</div>
-                                        <div class="small text-gray-500">Chicken the Dog · 2w</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
-                            </div>
+                        <!-- Dropdown - Messages -->
+                        <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                            aria-labelledby="messagesDropdown">
+                            <h6 class="dropdown-header">
+                                Message Center
+                            </h6>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="dropdown-list-image mr-3">
+                                    <img class="rounded-circle" src="img/undraw_profile_1.svg" alt="...">
+                                    <div class="status-indicator bg-success"></div>
+                                </div>
+                                <div class="font-weight-bold">
+                                    <div class="text-truncate">Hi there! I am wondering if you can help me with a
+                                        problem I've been having.</div>
+                                    <div class="small text-gray-500">Emily Fowler · 58m</div>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="dropdown-list-image mr-3">
+                                    <img class="rounded-circle" src="img/undraw_profile_2.svg" alt="...">
+                                    <div class="status-indicator"></div>
+                                </div>
+                                <div>
+                                    <div class="text-truncate">I have the photos that you ordered last month, how
+                                        would you like them sent to you?</div>
+                                    <div class="small text-gray-500">Jae Chun · 1d</div>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="dropdown-list-image mr-3">
+                                    <img class="rounded-circle" src="img/undraw_profile_3.svg" alt="...">
+                                    <div class="status-indicator bg-warning"></div>
+                                </div>
+                                <div>
+                                    <div class="text-truncate">Last month's report looks great, I am very happy with
+                                        the progress so far, keep up the good work!</div>
+                                    <div class="small text-gray-500">Morgan Alvarez · 2d</div>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="dropdown-list-image mr-3">
+                                    <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
+                                        alt="...">
+                                    <div class="status-indicator bg-success"></div>
+                                </div>
+                                <div>
+                                    <div class="text-truncate">Am I a good boy? The reason I ask is because someone
+                                        told me that people say this to all dogs, even if they aren't good...</div>
+                                    <div class="small text-gray-500">Chicken the Dog · 2w</div>
+                                </div>
+                            </a>
+                            <a class="dropdown-item text-center small text-gray-500" href="#">Read More
+                                Messages</a>
+                        </div>
                         </li>
 
                         <!-- <div class="topbar-divider d-none d-sm-block"></div> -->
@@ -451,16 +464,15 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Imaniar</span>
                                 <img class="img-profile rounded-circle"
-                                src="{{ asset('sb-admin/img/undraw_profile.svg') }}"
-                                >
+                                    src="{{ asset('sb-admin/img/undraw_profile.svg') }}">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
 
                                 <a class=" dropdown-item disabled text-success ">
-                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-success-400 "></i>
-                                     Admin
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-success-400 "></i>
+                                    Admin
                                 </a>
 
                                 <!-- <a class="dropdown-item" href="#">
@@ -468,7 +480,7 @@
                                     Profile
                                 </a> -->
 
-                                
+
 
                                 <a class="dropdown-item" href="#">
                                     <i class="fas fa-cog fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -479,7 +491,8 @@
                                     Activity Log
                                 </a> -->
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="#" data-toggle="modal"
+                                    data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>
@@ -494,7 +507,7 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                @yield('content')
+                    @yield('content')
 
                 </div>
                 <!-- /.container-fluid -->
@@ -540,36 +553,41 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                    <form action="{{ route('logout') }}" id="logout" method="POST">
+                        
+                    <a role="button" class="btn btn-primary" onclick="document.getElementById('logout').submit();">Logout</a>
+                        @csrf
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 
-<!-- Bootstrap core JavaScript-->
-   <script src="{{ asset('sb-admin/vendor/jquery/jquery.min.js') }}"></script>
+    <!-- Bootstrap core JavaScript-->
+    <script src="{{ asset('sb-admin/vendor/jquery/jquery.min.js') }}"></script>
 
     <script src="{{ asset('sb-admin/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-    <!-- Core plugin JavaScript--> 
+    <!-- Core plugin JavaScript-->
     <script src="{{ asset('sb-admin/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
     <!-- Custom scripts for all pages-->
-    <script src="{{ asset('sb-admin/js/sb-admin-2.min.js') }}"></script>
+    <script src="{{ asset('sb-admin/vendor/js/sb-admin-2.min.js') }}"></script>
 
     <script>
-    $(document).ready(function () {
-      // Menangani klik pada elemen dengan class 'nav-link'
-      $('.nav-link').click(function () {
-        var target = $(this).data('Daftarnamapns'); // Mendapatkan nilai data-target yang ada di <a>
+        $(document).ready(function() {
+            // Menangani klik pada elemen dengan class 'nav-link'
+            $('.nav-link').click(function() {
+                var target = $(this).data('Daftarnamapns'); // Mendapatkan nilai data-target yang ada di <a>
 
-        // Menutup semua dropdown yang tidak dipilih
-        $('.collapse').not(Daftarnamapns).collapse('hide');
-      });
-    });
-  </script> 
- <!-- Page level plugins -->
- <script src="{{ asset('sb-admin/vendor/datatables/jquery.dataTables.min.js') }}"></script>
- <script src="{{ asset('sb-admin/vendor/datatables/dataTables.bootstrap4.min.js') }}"></script>
- <!-- Page level custom scripts -->
- <script src="{{ asset('sb-admin/js/demo/datatables-demo.js') }}"></script>
+                // Menutup semua dropdown yang tidak dipilih
+                $('.collapse').not(Daftarnamapns).collapse('hide');
+            });
+        });
+    </script>
+    <!-- Page level plugins -->
+    <script src="{{ asset('sb-admin/vendor/datatables/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('sb-admin/vendor/datatables/dataTables.bootstrap4.min.js') }}"></script>
+    <!-- Page level custom scripts -->
+    <script src="{{ asset('sb-admin/js/demo/datatables-demo.js') }}"></script>
 </body>
+
 </html>

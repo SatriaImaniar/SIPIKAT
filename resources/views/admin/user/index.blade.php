@@ -13,12 +13,12 @@
                     Tambah anggota
                 </a>
             </div>
-            <div>
+            {{-- <div>
                 <a href="#" class="btn btn-sm btn-success"> <i class="fas fa-file-excel mr-2"></i>Excel </a>
             </div>
             <div>
                 <a href="#" class="btn btn-sm btn-danger"> <i class="fas fa-file-excel mr-2"></i>PDF </a>
-            </div>
+            </div> --}}
         </div>
         <div class="card-body ">
 
@@ -40,6 +40,86 @@
                     <tbody>
                         <tr class="text-center">
                             <td>1</td>
+                            <td>Don</td>
+                            <td>123456789</td>
+                            <td>
+                                <span class="badge badge-dark badge-pill">Admin</span>
+                            </td>
+                            <td>
+                                <span class="badge badge-danger badge-pill">Belum ditugaskan </span>
+                            </td>
+                            <td>2011/01/25</td>
+                            <td class="text-center">
+                                <a href="#" class="btn btn-warning btn-sm">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <a href="#" class="btn btn-danger btn-sm">
+                                    <i class="fas fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class="text-center">
+                            <td>2</td>
+                            <td>Donna</td>
+                            <td>123456789</td>
+                            <td>
+                                <span class="badge badge-dark badge-pill">Admin</span>
+                            </td>
+                            <td>
+                                <span class="badge badge-danger badge-pill">Belum ditugaskan </span>
+                            </td>
+                            <td>2011/01/25</td>
+                            <td class="text-center">
+                                <a href="#" class="btn btn-warning btn-sm">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <a href="#" class="btn btn-danger btn-sm">
+                                    <i class="fas fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class="text-center">
+                            <td>3</td>
+                            <td>Donna Sni</td>
+                            <td>123456789</td>
+                            <td>
+                                <span class="badge badge-dark badge-pill">Admin</span>
+                            </td>
+                            <td>
+                                <span class="badge badge-danger badge-pill">Belum ditugaskan </span>
+                            </td>
+                            <td>2011/01/25</td>
+                            <td class="text-center">
+                                <a href="#" class="btn btn-warning btn-sm">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <a href="#" class="btn btn-danger btn-sm">
+                                    <i class="fas fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class="text-center">
+                            <td>4</td>
+                            <td>Donna der</td>
+                            <td>123456789</td>
+                            <td>
+                                <span class="badge badge-dark badge-pill">Admin</span>
+                            </td>
+                            <td>
+                                <span class="badge badge-danger badge-pill">Belum ditugaskan </span>
+                            </td>
+                            <td>2011/01/25</td>
+                            <td class="text-center">
+                                <a href="#" class="btn btn-warning btn-sm">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <a href="#" class="btn btn-danger btn-sm">
+                                    <i class="fas fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class="text-center">
+                            <td>5</td>
                             <td>Donna Snider</td>
                             <td>123456789</td>
                             <td>
