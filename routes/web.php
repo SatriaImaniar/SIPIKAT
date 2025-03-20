@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TugasController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\AsetController;
 
 
 Route::get('/', function () {
@@ -20,7 +21,7 @@ Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 // register
 Route::get('register', [AuthController::class, 'register'])->name('register');
 
-// logika dari 3 rout ini seseorang yang login saja yang bisa mengakes, dan jika belum login seorang tersebut tidak bisa mengakses nya  atau    "MIDDLEWARE"
+//    "MIDDLEWARE"
 
 Route::middleware('checklogin')->group(function(){}); //eben bisa esih di akses 
 // Dashboard
@@ -36,3 +37,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+
+
+// Route untuk halaman "Mobil dan Motor"
+Route::get('/aset/mobil-dan-motor', [AsetController::class, 'mobilDanMotor'])->name('aset.mobil');

@@ -12,6 +12,7 @@
     <title>SIPIKAT</title>
 
     <!-- Custom fonts for this template-->
+
     <link href="{{ asset('sb-admin/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
@@ -39,7 +40,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-book"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">SIPIKAT hello world<sup></sup></div>
+                <div class="sidebar-brand-text mx-3">SIPIKAT <sup></sup></div>
             </a>
 
             <!-- Divider -->
@@ -200,17 +201,21 @@
                 <div id="collapseasetmobil" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Aset </h6>
-                        <a class="collapse-item" href="utilities-color.html">Mobil dan Motor</a>
-                        <a>service<a>
-                        <a>Ganti plat</a>
-                        <a class="collapse-item" href="utilities-border.html">Barang</a>
-                        {{--  penggunane sp --}}
-                        {{--  kode barang --}}
-                        <span>laptop</span>
-                        <span>printer</span>
-                        <span>Pc</span>
-                        <a class="collapse-item" href="utilities-other.html">Other</a>
+                        <h6 class="collapse-header">Aset</h6>
+
+                        <!-- Kategori Mobil & Motor -->
+                        <a class="collapse-item" href="{{ route('aset.mobil') }}">Mobil dan Motor</a>
+                        <div class="collapse-submenu ml-3">
+                            <a class="collapse-item" href="aset/mobil-dan-motor/service">Service</a>
+                            <a class="collapse-item" href="aset/mobil-dan-motor/ganti-plat">Ganti Plat</a>
+                        </div>
+                        <!-- Kategori Barang -->
+                        <h6 class="collapse-header mt-2">Barang</h6>
+                        <a class="collapse-item" href="aset/barang/laptop">Laptop</a>
+                        <a class="collapse-item" href="aset/barang/printer">Printer</a>
+                        <a class="collapse-item" href="aset/barang/pc">PC</a>
+                        <!-- Other -->
+                        <a class="collapse-item" href="aset/other">Other</a>
                     </div>
                 </div>
             </li>
@@ -468,7 +473,8 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth::user()->name }}</span>
+                                <span
+                                    class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth::user()->name }}</span>
                                 <img class="img-profile rounded-circle"
                                     src="{{ asset('sb-admin/img/undraw_profile.svg') }}">
                             </a>
@@ -560,8 +566,9 @@
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
                     <form action="{{ route('logout') }}" id="logout" method="POST">
-                        
-                    <a role="button" class="btn btn-primary" onclick="document.getElementById('logout').submit();">Logout</a>
+
+                        <a role="button" class="btn btn-primary"
+                            onclick="document.getElementById('logout').submit();">Logout</a>
                         @csrf
                     </form>
                 </div>
