@@ -5,8 +5,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TugasController;
+use App\Http\Controllers\BarangController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\AsetController;
+use App\Http\Controllers\KendaraanController;
+
 
 
 Route::get('/', function () {
@@ -37,7 +39,20 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+// Kendaraan
+Route::prefix('kendaraan')->group(function() {
+    Route::get('/mobil', [KendaraanController::class, 'mobil'])->name('kendaraan.mobil');
+    Route::get('/motor', [KendaraanController::class, 'motor'])->name('kendaraan.motor');
+});
+
+// Barang
+Route::get('/barang', [BarangController::class, 'index'])->name('barang.index');
+Route::get('/barang/run', [BarangController::class, 'run'])->name('barang.run');
 
 
-// Route untuk halaman "Mobil dan Motor"
-Route::get('/aset/mobil-dan-motor', [AsetController::class, 'mobilDanMotor'])->name('aset.mobil');
+
+// Route::prefix('barang')->group(function() {
+//     Route::get('/laptop', [BarangController::class, 'laptop'])->name('barang.laptop');
+//     Route::get('/printer', [BarangController::class, 'printer'])->name('barang.printer');
+//     Route::get('/pc', [BarangController::class, 'pc'])->name('barang.pc');
+// });
