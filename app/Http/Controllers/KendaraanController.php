@@ -12,13 +12,43 @@ class KendaraanController extends Controller
     {
         // Data dami untuk mobil
         $mobils = [
+            // (object)[
+            //     'nopol' => 'AB 1234 CD',
+            //     'nama' => 'Avanza Hitam',
+            //     'terakhir_service' => now()->subMonths(3)->format('d M Y'),
+            //     'berlaku_stnk' => now()->addMonths(2)->format('d M Y'),
+            //     'berlaku_plat' => now()->addYears(1)->format('d M Y'),
+            // ],
             (object)[
-                'nopol' => 'AB 1234 CD',
-                'nama' => 'Avanza Hitam',
-                'terakhir_service' => now()->subMonths(3)->format('d M Y'),
-                'berlaku_stnk' => now()->addMonths(2)->format('d M Y'),
-                'berlaku_plat' => now()->addYears(1)->format('d M Y'),
+                'kode_aset' => 'MB-001',
+                'no_polisi' => 'B 1234 ABC',
+                'merk' => 'Toyota Avanza',
+                'tahun' => '2023',
+                'tmt_pembelian' => '2023-01-15',
+                'pengguna' => 'Budi Santoso',
+                'kondisi' => 'Baik',
+                'riwayat_pemakaian' => 'Operasional harian dinas pendidikan'
             ],
+            (object)[
+                'kode_aset' => 'MB-002',
+                'no_polisi' => 'B 5678 DEF',
+                'merk' => 'Daihatsu Xenia',
+                'tahun' => '2022',
+                'tmt_pembelian' => '2022-08-20',
+                'pengguna' => 'Ani Wijaya',
+                'kondisi' => 'Perbaikan',
+                'riwayat_pemakaian' => 'Kunjungan lapangan dinas kesehatan'
+            ],
+            (object)[
+                'kode_aset' => 'MB-003',
+                'no_polisi' => 'B 9012 GHI',
+                'merk' => 'Honda HR-V',
+                'tahun' => '2024',
+                'tmt_pembelian' => '2024-03-01',
+                'pengguna' => 'Citra Dewi',
+                'kondisi' => 'Baik',
+                'riwayat_pemakaian' => 'Dinas luar kota'
+            ]
 
         ];
 
@@ -31,21 +61,41 @@ class KendaraanController extends Controller
 
     public function motor()
     {
-        // Data dami untuk mobil
-        $mobils = [
+        // Data dami untuk motor
+        $motors = [
+            // (object)[
+            //     'nopol' => 'AB 1234 CD',
+            //     'nama' => 'ninja ss',
+            //     'terakhir_service' => now()->subMonths(3)->format('d M Y'),
+            //     'berlaku_stnk' => now()->addMonths(2)->format('d M Y'),
+            //     'berlaku_plat' => now()->addYears(1)->format('d M Y'),
+            // ],
             (object)[
-                'nopol' => 'AB 1234 CD',
-                'nama' => 'ninja ss',
-                'terakhir_service' => now()->subMonths(3)->format('d M Y'),
-                'berlaku_stnk' => now()->addMonths(2)->format('d M Y'),
-                'berlaku_plat' => now()->addYears(1)->format('d M Y'),
+                'kode_aset' => 'MT-001',
+                'no_polisi' => 'B 3456 JKL',
+                'merk' => 'Honda Beat',
+                'tahun' => '2022',
+                'tmt_pembelian' => '2022-05-10',
+                'pengguna' => 'Rudi Hermawan',
+                'kondisi' => 'Baik',
+                'no_mesin' => 'HM123456'
             ],
+            (object)[
+                'kode_aset' => 'MT-002',
+                'no_polisi' => 'B 7890 MNO',
+                'merk' => 'Yamaha NMAX',
+                'tahun' => '2023',
+                'tmt_pembelian' => '2023-11-25',
+                'pengguna' => 'Dewi Lestari',
+                'kondisi' => 'Rusak Ringan',
+                'no_mesin' => 'YM654321'
+            ]
 
         ];
 
         return view('kendaraan.motor', [
-            'mobils' => $mobils,
-            'title' => 'Daftar Mobil'
+            'motors' => $motors,
+            'title' => 'Daftar motor'
         ]);
     }
 }

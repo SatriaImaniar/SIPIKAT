@@ -1,168 +1,82 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="card shadow">
-        <div class="card-header d-flex justify-content-between align-items-center">
-            <h5 class="m-0 font-weight-bold text-primary">
-                <i class="fas fa-car mr-2"></i>
-                Daftar Mobil
-            </h5>
-            <a class="btn btn-primary btn-sm">
-                {{-- href="{{ route('kendaraan.create-mobil') }}"  --}}
-                <i class="fas fa-plus-circle mr-1"></i> Tambah Mobil
+    <div class="container-fluid">
+        <h1 class="h3 mb-2 text-gray-800">
+            <i class="fas fa-car-side" aria-hidden="true"> Data Mobil </i>
+
+        </h1>
+
+
+        <!-- Navigation -->
+        <div class="mb-4">
+            <a href="{{ route('kendaraan.mobil') }}" class="btn btn-primary">
+                <i class="fas fa-plus"></i> Tambah Data Mobil
             </a>
         </div>
-        <div class="card-body">
-            <div class="table-responsive">
-                <table class="table table-bordered table-hover">
-                    <thead class="bg-light">
-                        <tr>
-                            <th>#</th>
-                            <th>Nopol</th>
-                            <th>Nama Mobil</th>
-                            <th>Terakhir Service</th>
-                            <th>Perpanjang STNK</th>
-                            <th>Ganti Plat</th>
-                            <th>Ganti Apa Bae</th>
-                            <th>Aksi</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @forelse ($mobils as $mobil)
+
+        <!-- Tabel Mobil -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Daftar Mobil Dinas</h6>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead class="thead-light">
                             <tr>
-                                <td>{{ $loop->iteration }}</td>
-                                <td>{{ $mobil->nopol }}</td>
-                                <td>{{ $mobil->nama }}</td>
-
-                                <!-- Kolom Service -->
-                                {{-- <td class="{{ $mobil->terakhir_service->diffInDays(now()) > 180 ? 'text-danger fw-bold' : '' }}">
-                                {{ $mobil->terakhir_service->format('d M Y') }}
-                                @if ($mobil->terakhir_service->diffInDays(now()) > 180)
-                                <i class="fas fa-exclamation-circle text-danger ms-1"></i>
-                                @endif
-                            </td> --}}
-
-                                <td
-                                    class="{{ \Carbon\Carbon::parse($mobil->terakhir_service)->diffInDays(now()) > 180 ? 'text-danger' : '' }}">
-                                    {{ \Carbon\Carbon::parse($mobil->terakhir_service)->format('d M Y') }}
-                                </td>
-
-                                <!-- Kolom STNK -->
-                                {{-- <td>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span>{{ $mobil->berlaku_stnk->format('d M Y') }}</span>
-                                    @if ($mobil->berlaku_stnk->isBefore(now()->addMonth(1)))
-                                    <span class="badge bg-warning ms-2">
-                                        <i class="fas fa-clock me-1"></i> Perpanjang!
-                                    </span>
-                                    @endif
-                                </div>
-                            </td> --}}
-
-                                <td>
-                                    {{ \Carbon\Carbon::parse($mobil->berlaku_stnk)->format('d M Y') }}
-                                    @if (\Carbon\Carbon::parse($mobil->berlaku_stnk)->lessThan(now()->addMonth(1)))
-                                        <span class="badge bg-warning">Perlu Perpanjang!</span>
-                                    @endif
-                                </td>
-                                <td>{{ \Carbon\Carbon::parse($mobil->berlaku_plat)->format('d M Y') }}</td>
-
-                                <!-- Kolom Plat -->
-                                {{-- <td class="{{ $mobil->berlaku_plat->isPast() ? 'text-danger' : '' }}">
-                                {{ $mobil->berlaku_plat->format('d M Y') }}
-                                @if ($mobil->berlaku_plat->isPast())
-                                <span class="badge bg-danger">Expired</span>
-                                @endif
-                            </td>
-                             --}}
-                                <td class={{ Carbon\Carbon::parse($mobil->berlaku_plat)->isPast() ? 'text-danger' : '' }}>
-                                    {{ Carbon\Carbon::parse($mobil->berlaku_plat)->format('d M Y') }}
-                                    @if (Carbon\Carbon::parse($mobil->berlaku_plat)->isPast())
-                                        <span class="badge bg-danger">Expired</span>
-                                    @endif
-                                </td>
-                                <!-- Kolom Aksi -->
-                                <td>
-                                    <a {{-- href="{{ route('kendaraan.edit-mobil', $mobil->id) }}"  --}} class="btn btn-sm btn-warning" title="Edit">
-                                        <i class="fas fa-edit"></i>
-                                    </a>
-                                    {{-- {{ route('kendaraan.destroy', $mobil->id) }} --}}
-                                    <form action="#" method="POST" class="d-inline"
-                                        onsubmit="return confirm('Hapus data ini?')">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" class="btn btn-sm btn-danger" title="Hapus">
-                                            <i class="fas fa-trash"></i>
-                                        </button>
-                                    </form>
-                                </td>
+                                <th>Kode Aset</th>
+                                <th>No Polisi</th>
+                                <th>Merk/Type</th>
+                                <th>Tahun</th>
+                                <th>TMT Services</th>
+                                <th>Pengguna</th>
+                                <th>Kondisi</th>
+                                <th>Riwayat Pemakaian</th>
                             </tr>
-                        @empty
-                            <tr>
-                                <td colspan="7" class="text-center">Tidak ada data mobil</td>
-                            </tr>
-                        @endforelse
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            @forelse($mobils as $mobil)
+                                <tr>
+                                    <td>{{ $mobil->kode_aset }}</td>
+                                    <td>{{ $mobil->no_polisi }}</td>
+                                    <td>{{ $mobil->merk }}</td>
+                                    <td>{{ $mobil->tahun }}</td>
+                                    <td>{{ date('d/m/Y', strtotime($mobil->tmt_pembelian)) }}</td>
+                                    <td>{{ $mobil->pengguna }}</td>
+                                    <td>
+                                        <span
+                                            class="badge 
+                                        {{ $mobil->kondisi == 'Baik' ? 'badge-success' : 'badge-danger' }}">
+                                            {{ $mobil->kondisi }}
+                                        </span>
+                                    </td>
+                                    <td>{{ $mobil->pengguna }}</td>
+                                @empty
+                                <tr>
+                                    <td colspan="8" class="text-center">Tidak ada data printer</td>
+                                </tr>
+                            @endforelse
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
 @endsection
 
+@section('styles')
+    <style>
+        .table thead th {
+            vertical-align: middle;
+            text-align: center;
+        }
 
-
-{{-- @extends('layouts.app')
-@section('content')
-    <div class="card shadow">
-        <div class="card-header">
-            <h5 class="m-0 font-weight-bold text-primary">
-                <i class="fas fa-car mr-2"></i>
-                Daftar Mobil
-            </h5>
-        </div>
-        <div class="card-body">
-            <table class="table table-bordered">
-                <thead class="bg-light">
-                    <tr>
-                        <th>Nopol</th>
-                        <th>Nama Mobil</th>
-                        <th>Terakhir Service</th>
-                        <th>Perpanjang STNK</th>
-                        <th>Ganti Plat</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($mobils as $mobil)
-                        <tr>
-                            <td>{{ $mobil->nopol }}</td>
-                            <td>{{ $mobil->nama }}</td>
-                            {{-- <td class="{{ $mobil->terakhir_service->diffInDays(now()) > 180 ? 'text-danger' : '' }}">
-                        {{ $mobil->terakhir_service->format('d M Y') }}
-                    </td> --}}
-{{-- <td
-                                class="{{ \Carbon\Carbon::parse($mobil->terakhir_service)->diffInDays(now()) > 180 ? 'text-danger' : '' }}">
-                                {{ \Carbon\Carbon::parse($mobil->terakhir_service)->format('d M Y') }}
-                            </td> --}}
-
-{{-- <td>
-                                {{ \Carbon\Carbon::parse($mobil->berlaku_stnk)->format('d M Y') }}
-                                @if (\Carbon\Carbon::parse($mobil->berlaku_stnk)->lessThan(now()->addMonth(1)))
-                                    <span class="badge bg-warning">Perlu Perpanjang!</span>
-                                @endif
-                            </td>
-                            <td>{{ \Carbon\Carbon::parse($mobil->berlaku_plat)->format('d M Y') }}</td> --}}
-
-{{-- <td>
-                                {{ $mobil->berlaku_stnk->format('d M Y') }}
-                                @if ($mobil->berlaku_stnk < now()->addMonth(1))
-                                    <span class="badge bg-warning">Perlu Perpanjang!</span>
-                                @endif
-                            </td>
-                            <td>{{ $mobil->berlaku_plat->format('d M Y') }}</td> --}}
-{{-- </tr>
-                    @endforeach
-                </tbody>
-            </table>
-        </div>
-    </div> --}}
-{{-- @endsection --}}
+        .badge-success {
+            background-color: #28a745;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+        }
+    </style>
+@endsection
