@@ -2,12 +2,12 @@
 
 @section('content')
 <div class="container-fluid">
-    <h1 class="h3 mb-2 text-gray-800"> <i class="fas fa-laptop">            Data Laptop</i></h1>
+    <h1 class="h3 mb-2 text-gray-800"> <i class="fas fa-laptop">            Data Unit Tonjong</i></h1>
     
     <!-- Navigation -->
     <div class="mb-4">
         <a href="{{ route('barang.laptop') }}" class="btn btn-primary">
-            <i class="fas fa-plus"></i> Tambah Data Laptop
+            <i class="fas fa-plus"></i> Data Unit Tonjong
         </a>
     </div>
 
@@ -22,7 +22,7 @@
                     <thead class="thead-light">
                         <tr>
                             <th>Kode Aset</th>
-                            <th>Merk</th>
+                            <th></th>
                             <th>Processor</th>
                             <th>RAM</th>
                             <th>Storage</th>
@@ -42,7 +42,13 @@
                                 <td>{{ date('d/m/Y', strtotime($laptop->tmt_pembelian)) }}</td>
                                 <td>{{ $laptop->pengguna }}</td>
                                 <td>
-                                    <span class="badge badge-success">
+                                    <span class="badge 
+                                        {{ match($laptop->status) {
+                                            'Aktif' => 'badge-success',
+                                            'Perbaikan' => 'badge-warning',
+                                            'Rusak' => 'badge-danger',
+                                            default => 'badge-danger',
+                                        } }}">
                                         {{ $laptop->status }}
                                     </span>
                                 </td>

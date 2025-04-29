@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="container">
+    
     <div class="row justify-content-center">
         <div class="col-xl-6 col-lg-7 col-md-9">
             <div class="card border-0 shadow-lg my-5">
@@ -16,6 +17,20 @@
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
 
+                            <div class="form-group mb-3">
+                                <input id="nip" type="nip" 
+                                    class="form-control form-control-user @error('nip') is-invalid @enderror" 
+                                    name="nip" 
+                                    value="{{ old('nip') }}" 
+                                    placeholder="Masukan Nama"
+                                    required autocomplete="nip" autofocus>
+
+                                @error('nip')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
                             <div class="form-group mb-3">
                                 <input id="nip" type="nip" 
                                     class="form-control form-control-user @error('nip') is-invalid @enderror" 
@@ -44,7 +59,7 @@
                                     </span>
                                 @enderror
                             </div>
-                            <div class="form-group mb-3">
+                            {{-- <div class="form-group mb-3">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                                     <label class="form-check-label" for="remember">
@@ -52,7 +67,7 @@
                                     </label>
 
                                 </div>
-                            </div>
+                            </div> --}}
 
                             <button type="submit" class="btn btn-primary btn-user btn-block mb-3">
                                 {{ __('Login') }}

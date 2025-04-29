@@ -62,7 +62,12 @@
                 </a>
             </li>
 
-
+            {{-- <li class="nav-item">
+                <a class="nav-link" href="{{ route('manajemenuser.index') }}">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Diklat</span>
+                </a>
+            </li> --}}
             <!-- Divider -->
             {{-- <hr class="sidebar-divider"> --}}
 
@@ -72,14 +77,14 @@
             </div> --}}
 
             <!-- Nav Item - Utilities -->
-            <li class="nav-item {{ $menuAdminUser ?? '' }}">
+            {{-- <li class="nav-item {{ $menuAdminUser ?? '' }}">
                 <a class="nav-link" href="{{ route('user') }}">
                     <i class="fas fa-user"></i>
                     <span>User</span></a>
-            </li>
+            </li> --}}
 
             <!-- Data Master -->
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMasterData">
                     <i class="fas fa-database"></i>
                     <span>Data Master</span>
@@ -93,8 +98,9 @@
                             UK & KD </a>
                     </div>
                 </div>
-            </li>
-            {{-- ASET KONTOL --}}
+            </li> --}}
+
+            {{-- ASET  --}}
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAset">
                     <i class="fas fa-boxes"></i> <!-- Ikon aset -->
@@ -130,6 +136,9 @@
             </li>
 
 
+
+
+
             {{-- TMT --}}
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTMT">
@@ -149,17 +158,19 @@
                     </div>
                 </div>
             </li>
-
             <!-- Menu User -->
-            <div class="sidebar-heading">Pegawai</div>
+            {{-- <div class="sidebar-heading">Pegawai</div> --}}
+
 
             <!-- Data PNS -->
+{{-- 
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('pns.index') }}">
                     <i class="fas fa-id-card"></i>
-                    <span>Data PNS</span>
+                    <span>My Data</span>
                 </a>
-            </li>
+            </li> --}}
+
 
             <!-- Diklat -->
             <li class="nav-item">
@@ -177,7 +188,7 @@
             </li>
 
             <!-- Berkas Kenaikan Pangkat-->
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBerkas">
                     <i class="fas fa-folder-open"></i>
                     <span>Berkas KP</span>
@@ -191,228 +202,12 @@
                         <a class="collapse-item" href="">Reguler</a>
                     </div>
                 </div>
-            </li>
-
-
-
-
-
-            <!-- Nav Item - Utilities -->
-            {{-- <li class="nav-item {{ $menuAdminTugas ?? '' }}">
-                <a class="nav-link" href="{{ route('tugas') }}">
-                    <i class="fas fa-tasks"></i>
-                    <span>Tugas</span></a>
             </li> --}}
 
-            {{-- <li class="nav-item"> 
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDatauser"
-                    aria-expanded="true" aria-controls="collapseDatauser">
-                    <i class=""></i>
-                    <span>Data User</span>
-                </a>
-                <div id="collapseDatauser" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Anggota PNS:</h6>
-                        <a class="collapse-item" href="utilities-color.html">TMT PNS </a>
-                        <a class="collapse-item" href="utilities-border.html">TMT Kenaikan Berkala</a>
-                        <a class="collapse-item" href="utilities-animation.html">TMT kenaikan Pangkat</a>
-                         <a class="collapse-item" href="utilities-other.html">Other</a> 
-                    </div>
-                </div>
-            </li> --}}
-
-            <!-- Divider -->
-            {{-- <hr class="sidebar-divider"> --}}
-            <!-- Heading -->
-            {{-- <div class="sidebar-heading">
-                Menu User
-            </div> --}}
-
-            <!-- Nav Item - Utilities Collapse Menu -->
-            {{-- <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse"
-                    data-target="#collapseDaftarNamaPNS" aria-expanded="true" aria-controls="collapseDaftarNamaPNS">
-                    <i class=""></i>
-                    <span>Data Anggota PNS</span>
-                </a>
-                <div id="collapseDaftarNamaPNS" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Manajemen PNS:</h6>
-                        <a class="collapse-item" href="utilities-color.html">TMT Kenaikan Pangkat</a>
-                        <a class="collapse-item" href="utilities-border.html">TMT Kenaikan Berkala</a>
-                    </div>
-                </div>
-            </li> --}}
-
-            {{-- <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse"
-                    data-target="#collapseNamaJabatan" aria-expanded="true" aria-controls="collapseNamaJabatan">
-                    <i class=""></i>
-                    <span>Data Kepala Dinas</span>
-                </a>
-                <div id="collapseNamaJabatan" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Manajemen Kepala Dinas:</h6>
-                        {{-- <a class="collapse-item" href="utilities-color.html">Tmt Kenaikan Pangkat</a> --}}
-            {{-- <a class="collapse-item" href="utilities-border.html">Tambah Data </a>
-                        <a class="collapse-item" href="utilities-animation.html">Daftar Jabatan</a> --}}
-            {{-- <a class="collapse-item" href="utilities-other.html">Other</a> --}}
-            {{-- <a class="collapse-item" href="utilities-border.html">TMT Kenaikan Berkala</a>
-                        <a class="collapse-item" href="utilities-animation.html">TMT Kenaikan Per PNS</a> --}}
-            {{-- <a class="collapse-item" href="utilities-other.html">Other</a> --}}
-            {{-- </div>
-                </div>
-            </li>  --}}
 
 
-            {{-- <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse"
-                    data-target="#collapseinputdatakepaladinas" aria-expanded="true"
-                    aria-controls="collapseinputdatakepaladinas">
-                    <i class="fas fa-user-tie"></i>
-                    <span>Data Kepala Dinas</span>
-                </a>
-                <div id="collapseinputdatakepaladinas" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Data kepala dinas:</h6>
-                        <a class="collapse-item" href="utilities-color.html">TMT Kenaikan Pangkat</a>
-                        <a class="collapse-item" href="utilities-border.html">TMT Kenaikan PNS</a>
-                        <a class="collapse-item" href="utilities-animation.html">TMT Kenaikan Berkala</a>
-                        {{-- <a class="collapse-item" href="utilities-other.html">Other</a> --}}
-            {{-- </div> --}}
-            {{-- </div> --}}
-            {{-- </li> --}}
 
-            {{-- <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDiklat"
-                    aria-expanded="true" aria-controls="collapseDiklat">
-                    <i class=""></i>
-                    <span>Diklat</span>
-                </a>
-                <div id="collapseDiklat" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Diklat:</h6>
-                        <a class="collapse-item" href="utilities-color.html">TMT Berangkat Diklat</a>
-                        <a class="collapse-item" href="utilities-border.html">TMT selesai Diklat</a>
-                        <a class="collapse-item" href="utilities-animation.html">Hasil Diklat</a>
-                        <a class="collapse-item" href="utilities-other.html">Other</a>
-                    </div>
-                </div>
-            </li> --}}
 
-            {{-- <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseasetmobil"
-                    aria-expanded="true" aria-controls="collapseasetmobil">
-                    <i class=""></i>
-                    <span>Aset </span>
-                </a>
-                <div id="collapseasetmobil" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Aset</h6>
-
-                        <!-- Kategori Mobil & Motor -->
-                        <h6 class="collapse-header">Kendaraan</h6>
-                        <a class="collapse-item" href=" {{ route('kendaraan.mobil') }}">Mobil</a>
-                        {{-- {{ route('kendaraan.motor') }} --}}
-            {{-- <a class="collapse-item" href=" {{ route('kendaraan.motor') }}">Motor</a> --}}
-
-            <!-- BARANG -->
-            {{-- <h6 class="collapse-header mt-3">Barang</h6> --}}
-            {{-- {{ route('barang.laptop') }} --}}
-            {{-- <a class="collapse-item" href="#">Laptop</a> --}}
-            {{-- {{ route('barang.printer') }} --}}
-            {{-- <a class="collapse-item" href="#">Printer</a> --}}
-            {{-- {{ route('barang.pc') }} --}}
-            {{-- <a class="collapse-item" href="#">PC</a>
-                        <a class="collapse-item" href="aset/other">Other</a>
-                    </div>
-                </div> --}}
-            {{-- </li> --}}
-            {{-- <li class="nav-item"> --}}
-            {{-- <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAset">
-                    <i class="fas fa-car"></i>
-                    <span>Aset</span>
-                </a>
-                <div id="collapseAset" class="collapse">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Kendaraan:</h6>
-                        <a class="collapse-item" href="{{ route('kendaraan.mobil') }}">Mobil</a>
-                        <a class="collapse-item" href="{{ route('kendaraan.motor') }}">Motor</a>
-                        <h6 class="collapse-header mt-3">Barang:</h6>
-                        <a class="collapse-item" href="">Laptop</a>
-                        <a class="collapse-item" href="">Printer</a>
-                    </div>
-                </div> --}}
-            {{-- </li> --}}
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            {{-- <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-wrench"></i>
-                    <span>Components</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item" href="buttons.html">Buttons</a>
-                        <a class="collapse-item" href="cards.html">Cards</a>
-                    </div>
-                </div>
-            </li> --}}
-
-            <!-- Divider -->
-            {{-- <hr class="sidebar-divider"> --}}
-
-            <!-- Heading -->
-            {{-- <div class="sidebar-heading">
-                Addons
-            </div> --}}
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            {{-- <li class="nav-item">
-                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true"
-                    aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Pages</span>
-                </a>
-                <div id="collapsePages" class="collapse show" aria-labelledby="headingPages"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="login.html">Login</a>
-                        <a class="collapse-item" href="register.html">Register</a>
-                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item active" href="blank.html">Blank Page</a>
-                    </div>
-                </div>
-            </li> --}}
-
-            <!-- Nav Item - Charts -->
-            {{-- <li class="nav-item">
-                <a class="nav-link" href="charts.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
-            </li> --}}
-
-            <!-- Nav Item - Tables -->
-            {{-- <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
-            </li> --}}
-
-            <!-- Divider -->
-            {{-- <hr class="sidebar-divider d-none d-md-block"> --}}
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
@@ -451,150 +246,151 @@
                     </form> -->
 
                     <!-- Topbar Navbar -->
-                    {{-- <ul class="navbar-nav ml-auto"> --}}
+                    <ul class="navbar-nav ml-auto">
 
-                    <!-- Dropdown - Alerts -->
-                    <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                        aria-labelledby="alertsDropdown">
-                        <h6 class="dropdown-header">
-                            Alerts Center
-                        </h6>
-                        <a class="dropdown-item d-flex align-items-center" href="#">
-                            <div class="mr-3">
-                                <div class="icon-circle bg-primary">
-                                    <i class="fas fa-file-alt text-white"></i>
+                        <!-- Dropdown - Alerts -->
+                        <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                            aria-labelledby="alertsDropdown">
+                            <h6 class="dropdown-header">
+                                Alerts Center
+                            </h6>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="mr-3">
+                                    <div class="icon-circle bg-primary">
+                                        <i class="fas fa-file-alt text-white"></i>
+                                    </div>
                                 </div>
-                            </div>
-                            <div>
-                                <div class="small text-gray-500">December 12, 2019</div>
-                                <span class="font-weight-bold">A new monthly report is ready to download!</span>
-                            </div>
-                        </a>
-                        <a class="dropdown-item d-flex align-items-center" href="#">
-                            <div class="mr-3">
-                                <div class="icon-circle bg-success">
-                                    <i class="fas fa-donate text-white"></i>
+                                <div>
+                                    <div class="small text-gray-500">December 12, 2019</div>
+                                    <span class="font-weight-bold">A new monthly report is ready to download!</span>
                                 </div>
-                            </div>
-                            <div>
-                                <div class="small text-gray-500">December 7, 2019</div>
-                                $290.29 has been deposited into your account!
-                            </div>
-                        </a>
-                        <a class="dropdown-item d-flex align-items-center" href="#">
-                            <div class="mr-3">
-                                <div class="icon-circle bg-warning">
-                                    <i class="fas fa-exclamation-triangle text-white"></i>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="mr-3">
+                                    <div class="icon-circle bg-success">
+                                        <i class="fas fa-donate text-white"></i>
+                                    </div>
                                 </div>
-                            </div>
-                            <div>
-                                <div class="small text-gray-500">December 2, 2019</div>
-                                Spending Alert: We've noticed unusually high spending for your account.
-                            </div>
-                        </a>
-                        <a class="dropdown-item text-center small text-gray-500" href="#">Show All
-                            Alerts</a>
-                    </div>
-                    </li>
+                                <div>
+                                    <div class="small text-gray-500">December 7, 2019</div>
+                                    $290.29 has been deposited into your account!
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="mr-3">
+                                    <div class="icon-circle bg-warning">
+                                        <i class="fas fa-exclamation-triangle text-white"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="small text-gray-500">December 2, 2019</div>
+                                    Spending Alert: We've noticed unusually high spending for your account.
+                                </div>
+                            </a>
+                            <a class="dropdown-item text-center small text-gray-500" href="#">Show All
+                                Alerts</a>
+                        </div>
+                        </li>
 
-                    <!-- Dropdown - Messages -->
-                    <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                        aria-labelledby="messagesDropdown">
-                        <h6 class="dropdown-header">
-                            Message Center
-                        </h6>
-                        <a class="dropdown-item d-flex align-items-center" href="#">
-                            <div class="dropdown-list-image mr-3">
-                                <img class="rounded-circle" src="img/undraw_profile_1.svg" alt="...">
-                                <div class="status-indicator bg-success"></div>
-                            </div>
-                            <div class="font-weight-bold">
-                                <div class="text-truncate">Hi there! I am wondering if you can help me with a
-                                    problem I've been having.</div>
-                                <div class="small text-gray-500">Emily Fowler · 58m</div>
-                            </div>
-                        </a>
-                        <a class="dropdown-item d-flex align-items-center" href="#">
-                            <div class="dropdown-list-image mr-3">
-                                <img class="rounded-circle" src="img/undraw_profile_2.svg" alt="...">
-                                <div class="status-indicator"></div>
-                            </div>
-                            <div>
-                                <div class="text-truncate">I have the photos that you ordered last month, how
-                                    would you like them sent to you?</div>
-                                <div class="small text-gray-500">Jae Chun · 1d</div>
-                            </div>
-                        </a>
-                        <a class="dropdown-item d-flex align-items-center" href="#">
-                            <div class="dropdown-list-image mr-3">
-                                <img class="rounded-circle" src="img/undraw_profile_3.svg" alt="...">
-                                <div class="status-indicator bg-warning"></div>
-                            </div>
-                            <div>
-                                <div class="text-truncate">Last month's report looks great, I am very happy with
-                                    the progress so far, keep up the good work!</div>
-                                <div class="small text-gray-500">Morgan Alvarez · 2d</div>
-                            </div>
-                        </a>
-                        <a class="dropdown-item d-flex align-items-center" href="#">
-                            <div class="dropdown-list-image mr-3">
-                                <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
-                                    alt="...">
-                                <div class="status-indicator bg-success"></div>
-                            </div>
-                            <div>
-                                <div class="text-truncate">Am I a good boy? The reason I ask is because someone
-                                    told me that people say this to all dogs, even if they aren't good...</div>
-                                <div class="small text-gray-500">Chicken the Dog · 2w</div>
-                            </div>
-                        </a>
-                        <a class="dropdown-item text-center small text-gray-500" href="#">Read More
-                            Messages</a>
-                    </div>
-                    </li>
+                        <!-- Dropdown - Messages -->
+                        <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                            aria-labelledby="messagesDropdown">
+                            <h6 class="dropdown-header">
+                                Message Center
+                            </h6>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="dropdown-list-image mr-3">
+                                    <img class="rounded-circle" src="img/undraw_profile_1.svg" alt="...">
+                                    <div class="status-indicator bg-success"></div>
+                                </div>
+                                <div class="font-weight-bold">
+                                    <div class="text-truncate">Hi there! I am wondering if you can help me with a
+                                        problem I've been having.</div>
+                                    <div class="small text-gray-500">Emily Fowler · 58m</div>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="dropdown-list-image mr-3">
+                                    <img class="rounded-circle" src="img/undraw_profile_2.svg" alt="...">
+                                    <div class="status-indicator"></div>
+                                </div>
+                                <div>
+                                    <div class="text-truncate">I have the photos that you ordered last month, how
+                                        would you like them sent to you?</div>
+                                    <div class="small text-gray-500">Jae Chun · 1d</div>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="dropdown-list-image mr-3">
+                                    <img class="rounded-circle" src="'enno/assets/img/foto.webp'" alt="...">
+                                    <div class="status-indicator bg-warning"></div>
+                                </div>
+                                <div>
+                                    <div class="text-truncate">Last month's report looks great, I am very happy with
+                                        the progress so far, keep up the good work!</div>
+                                    <div class="small text-gray-500">Morgan Alvarez · 2d</div>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="dropdown-list-image mr-3">
+                                    <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
+                                        alt="...">
+                                    <div class="status-indicator bg-success"></div>
+                                </div>
+                                <div>
+                                    <div class="text-truncate">Am I a good boy? The reason I ask is because someone
+                                        told me that people say this to all dogs, even if they aren't good...</div>
+                                    <div class="small text-gray-500">Chicken the Dog · 2w</div>
+                                </div>
+                            </a>
+                            <a class="dropdown-item text-center small text-gray-500" href="#">Read More
+                                Messages</a>
+                        </div>
+                        </li>
 
-                    <!-- <div class="topbar-divider d-none d-sm-block"></div> -->
+                        <!-- <div class="topbar-divider d-none d-sm-block"></div> -->
 
-                    <!-- Nav Item - User Information -->
-                    <li class="nav-item dropdown no-arrow">
-                        {{-- <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span
-                                    class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth::user()->name }}</span>
+                                    class="mr-2 d-none d-lg-inline text-gray-600 small">{{ optional(Auth::user())->name }}</span>
                                 <img class="img-profile rounded-circle"
-                                    src="{{ asset('sb-admin/img/undraw_profile.svg') }}">
-                            </a> --}}
-                        <!-- Dropdown - User Information -->
-                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                            aria-labelledby="userDropdown">
-
-                            <a class=" dropdown-item disabled text-success ">
-                                <i class="fas fa-user fa-sm fa-fw mr-2 text-success-400 "></i>
-                                Admin
+                                    src="{{ asset('enno/assets/img/fijikaze.jpg') }}">
                             </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
 
-                            <!-- <a class="dropdown-item" href="#">
+                                <a class=" dropdown-item disabled text-success ">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-success-400 "></i>
+                                    Pegawai
+                                </a>
+
+                                <a class="dropdown-item" href="#">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
-                                </a> -->
+                                </a>
 
 
 
-                            <a class="dropdown-item" href="#">
-                                <i class="fas fa-cog fa-sm fa-fw mr-2 text-gray-400"></i>
-                                Pengaturan
-                            </a>
-                            <!-- <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cog fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Pengaturan
+                                </a>
+                                <!-- <a class="dropdown-item" href="#">
                                     <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Activity Log
                                 </a> -->
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                Logout
-                            </a>
-                        </div>
-                    </li>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal"
+                                    data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
 
                     </ul>
 
@@ -702,40 +498,219 @@
 </body>
 
 </html>
-<!-- Bootstrap core JavaScript-->
-{{-- <script src="{{ asset('sb-admin/vendor/jquery/jquery.min.js') }}"></script> --}}
 
-{{-- <script src="{{ asset('sb-admin/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script> --}}
-<!-- Core plugin JavaScript-->
-{{-- <script src="{{ asset('sb-admin/vendor/jquery-easing/jquery.easing.min.js') }}"></script> --}}
-<!-- Custom scripts for all pages-->
-{{-- <script src="{{ asset('sb-admin/vendor/js/sb-admin-2.min.js') }}"></script> --}}
 
-{{-- <script>
-        $(document).ready(function() {
-            // Menangani klik pada elemen dengan class 'nav-link'
-            $('.nav-link').click(function() {
-                var target = $(this).data('Daftarnamapns'); // Mendapatkan nilai data-target yang ada di <a>
 
-                // Menutup semua dropdown yang tidak dipilih
-                $('.collapse').not(Daftarnamapns).collapse('hide');
-            });
-        });
-    </script> --}}
+<!-- Nav Item - Utilities -->
+{{-- <li class="nav-item {{ $menuAdminTugas ?? '' }}">
+                <a class="nav-link" href="{{ route('tugas') }}">
+                    <i class="fas fa-tasks"></i>
+                    <span>Tugas</span></a>
+            </li> --}}
 
-{{-- <script>
-        $(document).ready(function() {
-            $('#dataTable').DataTable({
-                responsive: true, // Aktifkan fitur responsif
-                language: {
-                    url: "//cdn.datatables.net/plug-ins/1.10.25/i18n/Indonesian.json" // Opsional: Bahasa Indonesia
-                }
-            });
-        });
-    </script> --}}
+{{-- <li class="nav-item"> 
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDatauser"
+                    aria-expanded="true" aria-controls="collapseDatauser">
+                    <i class=""></i>
+                    <span>Data User</span>
+                </a>
+                <div id="collapseDatauser" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Anggota PNS:</h6>
+                        <a class="collapse-item" href="utilities-color.html">TMT PNS </a>
+                        <a class="collapse-item" href="utilities-border.html">TMT Kenaikan Berkala</a>
+                        <a class="collapse-item" href="utilities-animation.html">TMT kenaikan Pangkat</a>
+                         <a class="collapse-item" href="utilities-other.html">Other</a> 
+                    </div>
+                </div>
+            </li> --}}
 
-<!-- Page level plugins -->
-{{-- <script src="{{ asset('sb-admin/vendor/datatables/jquery.dataTables.min.js') }}"></script> --}}
-{{-- <script src="{{ asset('sb-admin/vendor/datatables/dataTables.bootstrap4.min.js') }}"></script> --}}
-<!-- Page level custom scripts -->
-{{-- <script src="{{ asset('sb-admin/js/demo/datatables-demo.js') }}"></script> --}}
+<!-- Divider -->
+{{-- <hr class="sidebar-divider"> --}}
+<!-- Heading -->
+{{-- <div class="sidebar-heading">
+                Menu User
+            </div> --}}
+
+<!-- Nav Item - Utilities Collapse Menu -->
+{{-- <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse"
+                    data-target="#collapseDaftarNamaPNS" aria-expanded="true" aria-controls="collapseDaftarNamaPNS">
+                    <i class=""></i>
+                    <span>Data Anggota PNS</span>
+                </a>
+                <div id="collapseDaftarNamaPNS" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Manajemen PNS:</h6>
+                        <a class="collapse-item" href="utilities-color.html">TMT Kenaikan Pangkat</a>
+                        <a class="collapse-item" href="utilities-border.html">TMT Kenaikan Berkala</a>
+                    </div>
+                </div>
+            </li> --}}
+
+{{-- <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse"
+                    data-target="#collapseNamaJabatan" aria-expanded="true" aria-controls="collapseNamaJabatan">
+                    <i class=""></i>
+                    <span>Data Kepala Dinas</span>
+                </a>
+                <div id="collapseNamaJabatan" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Manajemen Kepala Dinas:</h6>
+                        {{-- <a class="collapse-item" href="utilities-color.html">Tmt Kenaikan Pangkat</a> --}}
+{{-- <a class="collapse-item" href="utilities-border.html">Tambah Data </a>
+                        <a class="collapse-item" href="utilities-animation.html">Daftar Jabatan</a> --}}
+{{-- <a class="collapse-item" href="utilities-other.html">Other</a> --}}
+{{-- <a class="collapse-item" href="utilities-border.html">TMT Kenaikan Berkala</a>
+                        <a class="collapse-item" href="utilities-animation.html">TMT Kenaikan Per PNS</a> --}}
+{{-- <a class="collapse-item" href="utilities-other.html">Other</a> --}}
+{{-- </div>
+                </div>
+            </li>  --}}
+
+
+{{-- <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse"
+                    data-target="#collapseinputdatakepaladinas" aria-expanded="true"
+                    aria-controls="collapseinputdatakepaladinas">
+                    <i class="fas fa-user-tie"></i>
+                    <span>Data Kepala Dinas</span>
+                </a>
+                <div id="collapseinputdatakepaladinas" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Data kepala dinas:</h6>
+                        <a class="collapse-item" href="utilities-color.html">TMT Kenaikan Pangkat</a>
+                        <a class="collapse-item" href="utilities-border.html">TMT Kenaikan PNS</a>
+                        <a class="collapse-item" href="utilities-animation.html">TMT Kenaikan Berkala</a>
+                        {{-- <a class="collapse-item" href="utilities-other.html">Other</a> --}}
+{{-- </div> --}}
+{{-- </div> --}}
+{{-- </li> --}}
+
+{{-- <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDiklat"
+                    aria-expanded="true" aria-controls="collapseDiklat">
+                    <i class=""></i>
+                    <span>Diklat</span>
+                </a>
+                <div id="collapseDiklat" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Diklat:</h6>
+                        <a class="collapse-item" href="utilities-color.html">TMT Berangkat Diklat</a>
+                        <a class="collapse-item" href="utilities-border.html">TMT selesai Diklat</a>
+                        <a class="collapse-item" href="utilities-animation.html">Hasil Diklat</a>
+                        <a class="collapse-item" href="utilities-other.html">Other</a>
+                    </div>
+                </div>
+            </li> --}}
+
+{{-- <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseasetmobil"
+                    aria-expanded="true" aria-controls="collapseasetmobil">
+                    <i class=""></i>
+                    <span>Aset </span>
+                </a>
+                <div id="collapseasetmobil" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Aset</h6>
+
+                        <!-- Kategori Mobil & Motor -->
+                        <h6 class="collapse-header">Kendaraan</h6>
+                        <a class="collapse-item" href=" {{ route('kendaraan.mobil') }}">Mobil</a>
+                        {{-- {{ route('kendaraan.motor') }} --}}
+{{-- <a class="collapse-item" href=" {{ route('kendaraan.motor') }}">Motor</a> --}}
+
+<!-- BARANG -->
+{{-- <h6 class="collapse-header mt-3">Barang</h6> --}}
+{{-- {{ route('barang.laptop') }} --}}
+{{-- <a class="collapse-item" href="#">Laptop</a> --}}
+{{-- {{ route('barang.printer') }} --}}
+{{-- <a class="collapse-item" href="#">Printer</a> --}}
+{{-- {{ route('barang.pc') }} --}}
+{{-- <a class="collapse-item" href="#">PC</a>
+                        <a class="collapse-item" href="aset/other">Other</a>
+                    </div>
+                </div> --}}
+{{-- </li> --}}
+{{-- <li class="nav-item"> --}}
+{{-- <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAset">
+                    <i class="fas fa-car"></i>
+                    <span>Aset</span>
+                </a>
+                <div id="collapseAset" class="collapse">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Kendaraan:</h6>
+                        <a class="collapse-item" href="{{ route('kendaraan.mobil') }}">Mobil</a>
+                        <a class="collapse-item" href="{{ route('kendaraan.motor') }}">Motor</a>
+                        <h6 class="collapse-header mt-3">Barang:</h6>
+                        <a class="collapse-item" href="">Laptop</a>
+                        <a class="collapse-item" href="">Printer</a>
+                    </div>
+                </div> --}}
+{{-- </li> --}}
+
+<!-- Nav Item - Pages Collapse Menu -->
+{{-- <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-wrench"></i>
+                    <span>Components</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Components:</h6>
+                        <a class="collapse-item" href="buttons.html">Buttons</a>
+                        <a class="collapse-item" href="cards.html">Cards</a>
+                    </div>
+                </div>
+            </li> --}}
+
+<!-- Divider -->
+{{-- <hr class="sidebar-divider"> --}}
+
+<!-- Heading -->
+{{-- <div class="sidebar-heading">
+                Addons
+            </div> --}}
+
+<!-- Nav Item - Pages Collapse Menu -->
+{{-- <li class="nav-item">
+                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true"
+                    aria-controls="collapsePages">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Pages</span>
+                </a>
+                <div id="collapsePages" class="collapse show" aria-labelledby="headingPages"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Login Screens:</h6>
+                        <a class="collapse-item" href="login.html">Login</a>
+                        <a class="collapse-item" href="register.html">Register</a>
+                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+                        <div class="collapse-divider"></div>
+                        <h6 class="collapse-header">Other Pages:</h6>
+                        <a class="collapse-item" href="404.html">404 Page</a>
+                        <a class="collapse-item active" href="blank.html">Blank Page</a>
+                    </div>
+                </div>
+            </li> --}}
+
+<!-- Nav Item - Charts -->
+{{-- <li class="nav-item">
+                <a class="nav-link" href="charts.html">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Charts</span></a>
+            </li> --}}
+
+<!-- Nav Item - Tables -->
+{{-- <li class="nav-item">
+                <a class="nav-link" href="tables.html">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Tables</span></a>
+            </li> --}}

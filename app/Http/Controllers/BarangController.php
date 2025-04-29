@@ -15,26 +15,36 @@ class BarangController extends Controller
                 'merk' => 'HP ProBook',
                 'processor' => 'Intel Core i5-1135G7',
                 'ram' => '8GB',
-                'storage' => '512GB SSD',
+                'storage' => '512 GB SSD',
                 'tmt_pembelian' => '2024-01-01',
                 'pengguna' => 'Ahmad Budiman',
-                'status' => 'Aktif'
+                'status' => 'Perbaikan'
             ],
             (object)[
                 'kode_aset' => 'LP-024',
                 'merk' => 'Lenovo ThinkPad',
                 'processor' => 'AMD Ryzen 5 5600U',
                 'ram' => '16GB',
-                'storage' => '1TB SSD',
+                'storage' => '1 TB SSD',
                 'tmt_pembelian' => '2024-03-10',
-                'pengguna' => 'Citra Dewi',
+                'pengguna' => 'Kitagawasan',
                 'status' => 'Aktif'
+            ],
+            (object)[
+                'kode_aset' => 'LP-025',
+                'merk' => 'Asus ZenBook',
+                'processor' => 'Intel Core i7-1165G7',
+                'ram' => '16GB',
+                'storage' => '1,5 TB SSD',
+                'tmt_pembelian' => '2024-05-15',
+                'pengguna' => 'warnudi',
+                'status' => 'Rusak'
             ]
         ];
         return view('barang.laptop', compact('laptops'));
     }
 
-    
+
     // kene printer
     public function printer()
     {
@@ -56,6 +66,15 @@ class BarangController extends Controller
                 'lokasi' => 'Kepala Dinas',
                 'status' => 'Baik',
                 'riwayat_kerusakan' => 'Apik pollll'
+            ],
+            (object)[
+                'kode_aset' => 'PR-013',
+                'merk' => 'HP LaserJet Pro M15w',
+                'tipe' => 'Printer Laser',
+                'tmt_pembelian' => '2024-03-20',
+                'lokasi' => 'Ruangan TU',
+                'status' => 'Rusak',
+                'riwayat_kerusakan' => 'Bodol kabeh'
             ]
         ];
         return view('barang.printer', compact('printers'));
@@ -73,22 +92,22 @@ class BarangController extends Controller
                 'storage' => '256GB HDD',
                 'tmt_pembelian' => '2023-07-15',
                 'lokasi' => 'Ruangan TU',
-                'pengguna' => 'Ahmad Budiman',
-                'status' => 'Cadangan'
-            ],
-            (object)[
-                'kode_aset' => 'PC-045',
-                'merk' => 'Dell OptiPlex',
-                'processor' => 'Intel Core i3-10100',
-                'ram' => '4GB',
-                'storage' => '256GB HDD',
-                'tmt_pembelian' => '2023-07-15',
-                'lokasi' => 'Ruangan TU',
-                'pengguna' => 'warnudi',
+                'pengguna' => 'Kitagawasan',
                 'status' => 'Cadangan'
             ],
             (object)[
                 'kode_aset' => 'PC-046',
+                'merk' => 'hp ProDesk',
+                'processor' => 'ryzen 5 3400G',
+                'ram' => '16 GB',
+                'storage' => '2TB HDD',
+                'tmt_pembelian' => '2023-11-01',
+                'lokasi' => 'sekretaris',
+                'pengguna' => 'warnudi',
+                'status' => 'Rusak'
+            ],
+            (object)[
+                'kode_aset' => 'PC-047',
                 'merk' => 'Acer Veriton',
                 'processor' => 'Intel Celeron J4125',
                 'ram' => '8GB',

@@ -19,7 +19,7 @@
                         </div>
                         <div class="h5 mb-0 font-weight-bold text-gray-800">
                             {{-- $40,000 --}}
-                            36
+                            5
                         </div>
                     </div>
                     <div class="col-auto">

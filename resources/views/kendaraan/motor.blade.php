@@ -28,10 +28,10 @@
                                 <th>No Polisi</th>
                                 <th>Merk/Type</th>
                                 <th>Tahun</th>
-                                <th>TMT Services</th>
+                                <th>Terakhir Services</th>
                                 <th>Pengguna</th>
                                 <th>Kondisi</th>
-                                <th>Riwayat Pemakaian</th>
+                                <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -44,14 +44,25 @@
                                     <td>{{ date('d/m/Y', strtotime($motor->tmt_pembelian)) }}</td>
                                     <td>{{ $motor->pengguna }}</td>
                                     <td>
-                                        <span
-                                            class="badge 
-                                        {{ $motor->kondisi == 'Baik' ? 'badge-success' : 'badge-danger' }}">
+                                        <span class="badge 
+                                            {{ match($motor->kondisi) {
+                                                'Baik' => 'badge-success',
+                                                'Perbaikan' => 'badge-warning',
+                                                'Rusak' => 'badge-danger',
+                                                default => 'badge-danger',
+                                            } }}">
                                             {{ $motor->kondisi }}
                                         </span>
                                     </td>
-                                    <td>{{ $motor->pengguna }}</td>
-                                @empty
+                                    <td>
+                                        <a href="#" class="btn btn-sm btn-warning">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <a href="#" class="btn btn-sm btn-danger">
+                                            <i class="fas fa-trash"></i>
+                                        </a>
+                                    </td>
+                                    @empty
                                 <tr>
                                     <td colspan="8" class="text-center">Tidak ada data printer</td>
                                 </tr>

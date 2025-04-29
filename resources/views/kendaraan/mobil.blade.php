@@ -33,6 +33,7 @@
                                 <th>Pengguna</th>
                                 <th>Kondisi</th>
                                 <th>Riwayat Pemakaian</th>
+                                <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -47,11 +48,24 @@
                                     <td>
                                         <span
                                             class="badge 
-                                        {{ $mobil->kondisi == 'Baik' ? 'badge-success' : 'badge-danger' }}">
+                                            {{ match($mobil->kondisi) {
+                                                'Baik' => 'badge-success',
+                                                'Perbaikan' => 'badge-warning',
+                                                'Rusak' => 'badge-danger',
+                                                default => 'badge-danger',
+                                            } }}">
                                             {{ $mobil->kondisi }}
                                         </span>
                                     </td>
-                                    <td>{{ $mobil->pengguna }}</td>
+                                    <td>{{ $mobil->riwayat_pemakaian }}</td>
+                                    <td>
+                                        <a href="#" class="btn btn-sm btn-warning">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <a href="#" class="btn btn-sm btn-danger">
+                                            <i class="fas fa-trash"></i>
+                                        </a>
+                                    </td>
                                 @empty
                                 <tr>
                                     <td colspan="8" class="text-center">Tidak ada data printer</td>

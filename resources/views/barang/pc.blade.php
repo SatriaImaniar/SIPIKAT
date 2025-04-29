@@ -44,7 +44,13 @@
                                     <td>{{ $pc->lokasi }}</td>
                                     <td>{{ $pc->pengguna }}</td>
                                     <td>
-                                        <span class="badge badge-success">
+                                        <span class="badge 
+                                            {{ match($pc->status) {
+                                                'Aktif' => 'badge-success',
+                                                'Cadangan' => 'badge-warning',
+                                                'Rusak' => 'badge-danger',
+                                                default => 'badge-danger',
+                                            } }}">
                                             {{ $pc->status }}
                                         </span>
                                     </td>

@@ -31,18 +31,17 @@ Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('register', [AuthController::class, 'register'])->name('register');
 
 //    "MIDDLEWARE"
-
-Route::middleware('checklogin')->group(function () {}); //eben bisa esih di akses 
+Route::middleware('checklogin')->group(function () {}); 
 // Dashboard
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+// Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth')->name('dashboard');
 // login
 
 // user
-Route::get('/user', [UserController::class, 'index'])->name('user');
+// Route::get('/user', [UserController::class, 'index'])->name('user');
 // tugas
-Route::get('/tugas', [TugasController::class, 'index'])->name('tugas');
+// Route::get('/tugas', [TugasController::class, 'index'])->name('tugas');
 
-Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
@@ -58,10 +57,17 @@ Route::get('/barang/printer', [BarangController::class, 'printer'])->name('baran
 Route::get('/barang/pc', [BarangController::class, 'pc'])->name('barang.pc');
 Route::get('/barang/lainnya', [BarangController::class, 'lainnya'])->name('barang.lainnya');
 
+// PNS Keseluruhan 
+Route::get('/pns', [PnsController::class, 'index'])->name('pns.index');
+Route::get('/pns/{id}', [PnsController::class, 'show'])->name('pns.show');
 
 // Manajemen User
-Route::get('/manajemenuser', [ManajemenUserController::class, 'index'])
-    ->name('manajemenuser.index');
+Route::get('/manajemenuser', [ManajemenUserController::class, 'index'])->name('manajemenuser.index');
+Route::get('/manajemen-user/{id}', [ManajemenUserController::class, 'show'])->name('manajemen-user.show');
+
+//create
+Route::get('/manajemenuser/{id}', [ManajemenUserController::class, 'show'])->name('manajemen-user.show');
+
 // Jabatan
 Route::get('/jabatan', [JabatanController::class, 'index'])->name('jabatan.index');
 
@@ -72,7 +78,6 @@ Route::get('/unitkerja', [UnitKerjaController::class, 'index'])->name('unit-kerj
 Route::prefix('tmt-kenaikan-pangkat')->group(function () {
     Route::get('/', [TMTKenaikanPangkatController::class, 'index'])
         ->name('tmt-pangkat.index');
-
     Route::post('/', [TMTKenaikanPangkatController::class, 'store'])
         ->name('tmt-pangkat.store');
 });
@@ -82,8 +87,6 @@ Route::prefix('tmt-berkala')->group(function () {
     Route::get('/', [TMTBerkalaController::class, 'index'])->name('tmt-berkala.index');
     // Route::post('/', [TMTBerkalaController::class, 'store'])->name('tmt-berkala.store');
 });
-
-// routes/web.php
 
 // TMT Pensiun
 Route::prefix('tmt-pensiun')->name('tmt.pensiun.')->group(function () {
@@ -96,11 +99,7 @@ Route::prefix('tmt-pensiun')->name('tmt.pensiun.')->group(function () {
     Route::delete('/{id}', [\App\Http\Controllers\TmtPensiunController::class, 'destroy'])->name('destroy');
 });
 
-
-// PNS Keseluruhan 
-Route::get('/pns', [PnsController::class, 'index'])->name('pns.index');
-Route::get('/pns/{id}', [PnsController::class, 'show'])->name('pns.show');
-
+// Diklat
 Route::get('/jadwal-diklat', [DiklatController::class, 'jadwal'])->name('diklat.jadwal');
 
 // Berkas Kenaikan Pangkat

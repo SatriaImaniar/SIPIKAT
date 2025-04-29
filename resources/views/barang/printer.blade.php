@@ -40,9 +40,15 @@
                                     <td>{{ $printer->lokasi }}</td>
                                     <td>{{ $printer->riwayat_kerusakan }}</td>
                                     <td>
-                                        <span class="badge badge-success">
-                                            {{ $printer->status }}
-                                        </span>
+                                        <span class="badge 
+                                        {{ match($printer->status) {
+                                            'Baik' => 'badge-success',
+                                            'Perlu Maintenance' => 'badge-warning',
+                                            'Rusak' => 'badge-danger',
+                                            default => 'badge-danger',
+                                        } }}">
+                                        {{ $printer->status }}
+                                    </span>
                                     </td>
                                 </tr>
                             @empty

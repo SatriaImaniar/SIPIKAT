@@ -24,9 +24,9 @@ class KendaraanController extends Controller
                 'no_polisi' => 'B 1234 ABC',
                 'merk' => 'Toyota Avanza',
                 'tahun' => '2023',
-                'tmt_pembelian' => '2023-01-15',
+                'tmt_pembelian' => '2025-01-15',
                 'pengguna' => 'Budi Santoso',
-                'kondisi' => 'Baik',
+                'kondisi' => 'Rusak',
                 'riwayat_pemakaian' => 'Operasional harian dinas pendidikan'
             ],
             (object)[
@@ -34,7 +34,7 @@ class KendaraanController extends Controller
                 'no_polisi' => 'B 5678 DEF',
                 'merk' => 'Daihatsu Xenia',
                 'tahun' => '2022',
-                'tmt_pembelian' => '2022-08-20',
+                'tmt_pembelian' => '2023-12-20',
                 'pengguna' => 'Ani Wijaya',
                 'kondisi' => 'Perbaikan',
                 'riwayat_pemakaian' => 'Kunjungan lapangan dinas kesehatan'
@@ -44,8 +44,8 @@ class KendaraanController extends Controller
                 'no_polisi' => 'B 9012 GHI',
                 'merk' => 'Honda HR-V',
                 'tahun' => '2024',
-                'tmt_pembelian' => '2024-03-01',
-                'pengguna' => 'Citra Dewi',
+                'tmt_pembelian' => '2025-03-30',
+                'pengguna' => 'Kitagawasan',
                 'kondisi' => 'Baik',
                 'riwayat_pemakaian' => 'Dinas luar kota'
             ]
@@ -75,19 +75,29 @@ class KendaraanController extends Controller
                 'no_polisi' => 'B 3456 JKL',
                 'merk' => 'Honda Beat',
                 'tahun' => '2022',
-                'tmt_pembelian' => '2022-05-10',
+                'tmt_pembelian' => '2025-05-10',
                 'pengguna' => 'Rudi Hermawan',
-                'kondisi' => 'Baik',
+                'kondisi' => 'Perbaikan',
                 'no_mesin' => 'HM123456'
             ],
             (object)[
                 'kode_aset' => 'MT-002',
                 'no_polisi' => 'B 7890 MNO',
                 'merk' => 'Yamaha NMAX',
-                'tahun' => '2023',
-                'tmt_pembelian' => '2023-11-25',
+                'tahun' => '2020',
+                'tmt_pembelian' => '2024-11-25',
                 'pengguna' => 'Dewi Lestari',
-                'kondisi' => 'Rusak Ringan',
+                'kondisi' => 'Rusak',
+                'no_mesin' => 'YM654321'
+            ],
+            (object)[
+                'kode_aset' => 'MT-003',
+                'no_polisi' => 'B 1357 PQR',
+                'merk' => 'Supra X 125',
+                'tahun' => '2008',
+                'tmt_pembelian' => '2025-07-15',
+                'pengguna' => 'Kitagawasan',
+                'kondisi' => 'Baik',
                 'no_mesin' => 'YM654321'
             ]
 

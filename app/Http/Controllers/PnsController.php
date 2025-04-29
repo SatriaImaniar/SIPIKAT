@@ -10,50 +10,21 @@ class PnsController extends Controller
     {
         // Data Dummy PNS
         $pnsList = [
-            [
-                'id' => 1,
-                'nip' => '199003012022011001',
-                'nama' => 'Ahmad Budiman',
-                'pangkat' => 'Penata Muda',
-                'golongan' => 'III/a',
-                'jabatan' => 'Analis Kepegawaian',
-                'unit_kerja' => 'Dinas Pendidikan',
-                'tmt_pangkat' => '2024-01-01',
-                'foto' => 'user1.jpg'
-            ],
-            [
-                'id' => 2,
-                'nip' => '198511052021021002',
-                'nama' => 'Dewi Lestari',
-                'pangkat' => 'Penata Tingkat I',
-                'golongan' => 'III/b',
-                'jabatan' => 'Kepala Seksi Kepegawaian',
-                'unit_kerja' => 'Dinas Kesehatan',
-                'tmt_pangkat' => '2023-06-15',
-                'foto' => 'user2.jpg'
-            ]
-        ];
-
-        return view('pns.index', compact('pnsList'));
-    }
-
-    public function show($id)
-    {
-        // Data Dummy Detail PNS
-        $pns = [
-            'id' => $id,
             'nip' => '199003012022011001',
-            'nama' => 'Ahmad Budiman',
+            'nama' => 'Kitagawasan',
             'tempat_lahir' => 'Jakarta',
             'tanggal_lahir' => '1990-03-01',
-            'jenis_kelamin' => 'Laki-laki',
+            'jenis_kelamin' => 'Perempuan',
+            'agama' => 'Islam',
+            'status_perkawinan' => 'Belum Menikah',
+            'pendidikan_Terakhir' => 'S1 Fakultas Hukum',
             'pangkat' => 'Penata Muda',
             'golongan' => 'III/a',
             'jabatan' => 'Analis Kepegawaian',
             'unit_kerja' => 'Dinas Pendidikan',
             'tmt_cpns' => '2022-01-01',
             'tmt_pangkat' => '2024-01-01',
-            'foto' => 'user1.jpg',
+            'foto' => 'enno/assets/img/foto.webp',
             'riwayat_tmt' => [
                 [
                     'jenis' => 'Kenaikan Pangkat',
@@ -65,7 +36,76 @@ class PnsController extends Controller
                     'tanggal' => '2023-07-01',
                     'keterangan' => 'Kenaikan gaji berkala'
                 ]
-            ]
+                ]
+            
+        ];
+
+        return view('pns.index', compact('pnsList'));
+    }
+
+    public function show($id)
+    {
+        // Data Dummy Detail PNS
+        $pns = [
+            'id' => $id,
+            'nip' => '199003012022011001',
+            'nama' => 'Kitagawasan',
+            'tempat_lahir' => 'Jakarta',
+            'tanggal_lahir' => '1990-03-01',
+            'jenis_kelamin' => 'Perempuan',
+            'agama' => 'Islam',
+            'status_perkawinan' => 'Belum Menikah',
+            'pendidikan_Terakhir' => 'S1 Fakultas Hukum',
+            'pangkat' => 'Penata Muda',
+            'golongan' => 'III/a',
+            'jabatan' => 'Analis Kepegawaian',
+            'unit_kerja' => 'Dinas Pendidikan',
+            'tmt_cpns' => '2022-01-01',
+            'tmt_pangkat' => '2024-01-01',
+            'foto' => 'enno/assets/img/foto.webp',
+            'riwayat_tmt' => [
+                [
+                    'jenis' => 'Kenaikan Pangkat',
+                    'tanggal' => '2024-01-01',
+                    'keterangan' => 'Naik pangkat ke III/a'
+                ],
+                [
+                    'jenis' => 'Kenaikan Berkala',
+                    'tanggal' => '2023-07-01',
+                    'keterangan' => 'Kenaikan gaji berkala'
+                ]
+                ]
+        ];
+
+        $pegawai = [
+            'id' => $id,
+            'nip' => '199003012022011001',
+            'nama' => 'Kitagawasan',
+            'tempat_lahir' => 'Jakarta',
+            'tanggal_lahir' => '1990-03-01',
+            'jenis_kelamin' => 'Perempuan',
+            'agama' => 'Islam',
+            'status_perkawinan' => 'Belum Menikah',
+            'pendidikan_Terakhir' => 'S1 Fakultas Hukum',
+            'pangkat' => 'Penata Muda',
+            'golongan' => 'III/a',
+            'jabatan' => 'Analis Kepegawaian',
+            'unit_kerja' => 'Dinas Pendidikan',
+            'tmt_cpns' => '2022-01-01',
+            'tmt_pangkat' => '2024-01-01',
+            'foto' => 'enno/assets/img/foto.webp',
+            'riwayat_tmt' => [
+                [
+                    'jenis' => 'Kenaikan Pangkat',
+                    'tanggal' => '2024-01-01',
+                    'keterangan' => 'Naik pangkat ke III/a'
+                ],
+                [
+                    'jenis' => 'Kenaikan Berkala',
+                    'tanggal' => '2023-07-01',
+                    'keterangan' => 'Kenaikan gaji berkala'
+                ]
+                ]
         ];
 
         return view('pns.show', compact('pns'));

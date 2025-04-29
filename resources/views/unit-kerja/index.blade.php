@@ -37,17 +37,17 @@
                             @php
                                 $unitKerjaDummy = [
                                     [
-                                        'nama_unit' => 'Dinas Pendidikan',
+                                        'nama_unit' => 'Bidang 2',
                                         'kepala' => 'Drs. Budi Santoso, M.Si.',
                                         'nip' => '197005011995031002',
                                     ],
                                     [
-                                        'nama_unit' => 'Dinas Kesehatan',
+                                        'nama_unit' => 'Bidang Khusus',
                                         'kepala' => 'Dr. Ani Wijaya, Sp.KJ',
                                         'nip' => '197512312000032001',
                                     ],
                                     [
-                                        'nama_unit' => 'Dinas Pekerjaan Umum',
+                                        'nama_unit' => 'Sekeretariat',
                                         'kepala' => 'Ir. Joko Prasetyo, MT',
                                         'nip' => '198003011998031003',
                                     ],
